@@ -11,7 +11,7 @@ namespace aima.core.agent
      * @author Ciaran O'Reilly
      * @author Mike Stampone
      */
-    public interface Environments
+    public interface Environment
     {
         /**
 	     * Returns the Agents belonging to this Environment.

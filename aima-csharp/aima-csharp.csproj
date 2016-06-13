@@ -52,10 +52,12 @@
     <Compile Include="agent\EnvironmentView.cs" />
     <Compile Include="agent\EnvironmentViewNotifier.cs" />
     <Compile Include="agent\impl\AbstractAgent.cs" />
+    <Compile Include="agent\impl\AbstractEnvironment.cs" />
     <Compile Include="agent\impl\DynamicAction.cs" />
     <Compile Include="agent\impl\DynamicEnvironmentState.cs" />
     <Compile Include="agent\impl\DynamicPercept.cs" />
     <Compile Include="agent\impl\DynamicState.cs" />
+    <Compile Include="agent\impl\LinkedHashSet.cs" />
     <Compile Include="agent\impl\NoOpAction.cs" />
     <Compile Include="agent\impl\ObjectWithDynamicAttributes.cs" />
     <Compile Include="agent\impl\SimpleEnvironmentView.cs" />
