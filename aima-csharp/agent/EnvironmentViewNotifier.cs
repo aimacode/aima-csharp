@@ -7,7 +7,7 @@ namespace aima.core.agent
      * @author Ciaran O'Reilly
      * 
      */
-     public interface EnvironmentViewModifier
+     public interface EnvironmentViewNotifier
     {
         /**
 	     * A simple notification message, to be forwarded to an Environment's
