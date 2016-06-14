@@ -53,6 +53,12 @@
     <Compile Include="agent\EnvironmentViewNotifier.cs" />
     <Compile Include="agent\impl\AbstractAgent.cs" />
     <Compile Include="agent\impl\AbstractEnvironment.cs" />
+    <Compile Include="agent\impl\aprog\simplerule\ANDCondition.cs" />
+    <Compile Include="agent\impl\aprog\simplerule\Condition.cs" />
+    <Compile Include="agent\impl\aprog\simplerule\EQUALCondition.cs" />
+    <Compile Include="agent\impl\aprog\simplerule\NOTCondition.cs" />
+    <Compile Include="agent\impl\aprog\simplerule\ORCondition.cs" />
+    <Compile Include="agent\impl\aprog\simplerule\Rule.cs" />
     <Compile Include="agent\impl\DynamicAction.cs" />
     <Compile Include="agent\impl\DynamicEnvironmentState.cs" />
     <Compile Include="agent\impl\DynamicPercept.cs" />
