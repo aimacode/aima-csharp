@@ -53,6 +53,8 @@
     <Compile Include="agent\EnvironmentViewNotifier.cs" />
     <Compile Include="agent\impl\AbstractAgent.cs" />
     <Compile Include="agent\impl\AbstractEnvironment.cs" />
+    <Compile Include="agent\impl\aprog\ModelBasedReflexAgentProgram.cs" />
+    <Compile Include="agent\impl\aprog\SimpleReflexAgentProgram.cs" />
     <Compile Include="agent\impl\aprog\simplerule\ANDCondition.cs" />
     <Compile Include="agent\impl\aprog\simplerule\Condition.cs" />
     <Compile Include="agent\impl\aprog\simplerule\EQUALCondition.cs" />
