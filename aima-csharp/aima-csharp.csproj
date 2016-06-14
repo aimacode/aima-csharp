@@ -61,11 +61,11 @@
     <Compile Include="agent\impl\aprog\simplerule\NOTCondition.cs" />
     <Compile Include="agent\impl\aprog\simplerule\ORCondition.cs" />
     <Compile Include="agent\impl\aprog\simplerule\Rule.cs" />
+    <Compile Include="agent\impl\aprog\TableDrivenAgentProgram.cs" />
     <Compile Include="agent\impl\DynamicAction.cs" />
     <Compile Include="agent\impl\DynamicEnvironmentState.cs" />
     <Compile Include="agent\impl\DynamicPercept.cs" />
     <Compile Include="agent\impl\DynamicState.cs" />
-    <Compile Include="agent\impl\LinkedHashSet.cs" />
     <Compile Include="agent\impl\NoOpAction.cs" />
     <Compile Include="agent\impl\ObjectWithDynamicAttributes.cs" />
     <Compile Include="agent\impl\SimpleEnvironmentView.cs" />
@@ -77,6 +77,8 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\LinkedHashSet.cs" />
+    <Compile Include="util\Table.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
