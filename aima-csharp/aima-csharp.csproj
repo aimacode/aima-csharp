@@ -78,6 +78,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="search\framework\Metrics.cs" />
+    <Compile Include="search\framework\Node.cs" />
+    <Compile Include="search\framework\PathCostFunction.cs" />
     <Compile Include="search\framework\problem\ActionsFunction.cs" />
     <Compile Include="search\framework\problem\BidirectionalProblem.cs" />
     <Compile Include="search\framework\problem\DefaultGoalTest.cs" />
@@ -88,8 +90,10 @@
     <Compile Include="search\framework\problem\StepCostFunction.cs" />
     <Compile Include="search\framework\Search.cs" />
     <Compile Include="search\framework\SearchAgent.cs" />
+    <Compile Include="search\framework\SimpleProblemSolvingAgent.cs" />
     <Compile Include="util\LinkedHashSet.cs" />
     <Compile Include="util\Table.cs" />
+    <Compile Include="util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
