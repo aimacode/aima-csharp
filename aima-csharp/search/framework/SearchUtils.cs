@@ -17,11 +17,13 @@ namespace aima.core.search.framework
         /**
 	     * Returns the list of actions corresponding to the complete path to the
 	     * given node or NoOp if path length is one.
-	     */
-        public static List<Action> actionsFromNodes(List<Node> nodeList)
+	     */    
+        public static List<Action> getSequenceOfActions(Node node)
         {
+            List<Node> nodes = node.getPathFromRoot();
             List<Action> actions = new List<Action>();
-            if (nodeList.Count == 1)
+
+            if(nodes.Count == 1)
             {
                 // I'm at the root node, this indicates I started at the
                 // Goal node, therefore just return a NoOp
@@ -31,14 +33,35 @@ namespace aima.core.search.framework
             {
                 // ignore the root node this has no action
                 // hence index starts from 1 not zero
-                for (int i = 1; i < nodeList.Count; i++)
+                for (int i = 1; i < nodes.Count; i++)
                 {
-                    Node node = nodeList[i];
-                    actions.Add(node.getAction());
+                    Node node_temp = nodes[i];
+                    actions.Add(node_temp.getAction());
                 }
             }
             return actions;
         }
+
+        /** Returns an empty action list. */
+        public static List<Action> failure()
+        {
+            return new List<Action>();
+        }
+
+        /** Checks whether a list of actions is empty. */
+        public static bool isFailure(List<Action> actions)
+        {
+            if(actions.Count == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }      
+
+        }
+        
 
         /**
 	     * Calls the goal test of the problem and - if the goal test is effectively
@@ -55,7 +78,7 @@ namespace aima.core.search.framework
                 if (gt is SolutionChecker)
                 {
                     isGoal = ((SolutionChecker)gt).isAcceptableSolution(
-                            actionsFromNodes(n.getPathFromRoot()), n.getState());
+                            getSequenceOfActions(n), n.getState());
                 }
                 else
                 {
