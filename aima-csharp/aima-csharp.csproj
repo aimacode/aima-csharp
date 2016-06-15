@@ -77,9 +77,13 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="search\framework\EvaluationFunction.cs" />
+    <Compile Include="search\framework\HeuristicFunction.cs" />
     <Compile Include="search\framework\Metrics.cs" />
     <Compile Include="search\framework\Node.cs" />
+    <Compile Include="search\framework\NodeExpander.cs" />
     <Compile Include="search\framework\PathCostFunction.cs" />
+    <Compile Include="search\framework\PerceptToStateFunction.cs" />
     <Compile Include="search\framework\problem\ActionsFunction.cs" />
     <Compile Include="search\framework\problem\BidirectionalProblem.cs" />
     <Compile Include="search\framework\problem\DefaultGoalTest.cs" />
@@ -90,7 +94,10 @@
     <Compile Include="search\framework\problem\StepCostFunction.cs" />
     <Compile Include="search\framework\Search.cs" />
     <Compile Include="search\framework\SearchAgent.cs" />
+    <Compile Include="search\framework\SearchForActions.cs" />
+    <Compile Include="search\framework\SearchUtils.cs" />
     <Compile Include="search\framework\SimpleProblemSolvingAgent.cs" />
+    <Compile Include="search\framework\SolutionChecker.cs" />
     <Compile Include="util\LinkedHashSet.cs" />
     <Compile Include="util\Table.cs" />
     <Compile Include="util\Util.cs" />

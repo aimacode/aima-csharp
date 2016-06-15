@@ -30,6 +30,6 @@ namespace aima.core.search.framework
          * @return true if the solution is acceptable, false otherwise, which
          *         indicates the search should be continued.
          */
-        bool isAcceptableSolution(List<Action> actions, object goal);
+        bool isAcceptableSolution(List<Action> actions, System.Object goal);
     }
 }
