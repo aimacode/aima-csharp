@@ -8,7 +8,7 @@ namespace aima.core.util
      * @author Mike Stampone
      * 
      */
-    public class Table<RowHeaderType, ColumnHeaderType, ValueType> // where Value_Type : struct
+    public class Table<RowHeaderType, ColumnHeaderType, ValueType> // where ValueType : struct
     {
         private List<RowHeaderType> rowHeaders;
         private List<ColumnHeaderType> columnHeaders;
