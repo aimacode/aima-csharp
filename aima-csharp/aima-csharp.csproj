@@ -102,6 +102,8 @@
     <Compile Include="search\framework\SolutionChecker.cs" />
     <Compile Include="util\ArrayIterator.cs" />
     <Compile Include="util\LinkedHashSet.cs" />
+    <Compile Include="util\Pair.cs" />
+    <Compile Include="util\Point2D.cs" />
     <Compile Include="util\SetOps.cs" />
     <Compile Include="util\Table.cs" />
     <Compile Include="util\Util.cs" />
