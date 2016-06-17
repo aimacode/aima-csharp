@@ -15,13 +15,13 @@ namespace aima.core.agent
     public interface AgentProgram
     {
         /**
-	    * The Agent's program, which maps any given percept sequences to an action.
-	    * 
-	    * @param percept
-	    *            The current percept of a sequence perceived by the Agent.
-	    * @return the Action to be taken in response to the currently perceived
-	    *         percept.
-	    */
+	 * The Agent's program, which maps any given percept sequences to an action.
+	 * 
+	 * @param percept
+	 *            The current percept of a sequence perceived by the Agent.
+	 * @return the Action to be taken in response to the currently perceived
+	 *         percept.
+	 */
         Action execute(Percept percept);
     }
 }

@@ -19,12 +19,12 @@ namespace aima.core.agent.impl
         }
 
         /**
-	     * Constructs an Agent with the specified AgentProgram.
-	     * 
-	     * @param aProgram
-	     *            the Agent's program, which maps any given percept sequences to
-	     *            an action.
-	     */
+	 * Constructs an Agent with the specified AgentProgram.
+	 * 
+	 * @param aProgram
+	 *            the Agent's program, which maps any given percept sequences to
+	 *            an action.
+	 */
         public AbstractAgent(AgentProgram aProgram)
         {
             program = aProgram;

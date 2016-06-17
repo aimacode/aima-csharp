@@ -27,11 +27,11 @@ namespace aima.core.agent.impl
         }
 
         /**
-	     * Returns a string representation of the object's current attributes
-	     * 
-	     * @return a string representation of the object's current attributes
-	     */
-        public  String describeAttributes()
+	 * Returns a string representation of the object's current attributes
+	 * 
+	 * @return a string representation of the object's current attributes
+	 */
+        public String describeAttributes()
         {
             StringBuilder sb = new StringBuilder();
 
@@ -58,51 +58,51 @@ namespace aima.core.agent.impl
         }
 
         /**
-	     * Returns an unmodifiable view of the object's key set
-	     * 
-	     * @return an unmodifiable view of the object's key set
-	     */
+	 * Returns an unmodifiable view of the object's key set
+	 * 
+	 * @return an unmodifiable view of the object's key set
+	 */
         public HashSet<Object> getKeySet()
         {
             return new HashSet<Object>(attributes.Keys);
         }
 
         /**
-	     * Associates the specified value with the specified attribute key. If the
-	     * ObjectWithDynamicAttributes previously contained a mapping for the
-	     * attribute key, the old value is replaced.
-	     * 
-	     * @param key
-	     *            the attribute key
-	     * @param value
-	     *            the attribute value
-	     */
+	 * Associates the specified value with the specified attribute key. If the
+	 * ObjectWithDynamicAttributes previously contained a mapping for the
+	 * attribute key, the old value is replaced.
+	 * 
+	 * @param key
+	 *            the attribute key
+	 * @param value
+	 *            the attribute value
+	 */
         public void setAttribute(Object key, Object value)
         {
             attributes[key] = value;
         }
 
         /**
-	     * Returns the value of the specified attribute key, or null if the
-	     * attribute was not found.
-	     * 
-	     * @param key
-	     *            the attribute key
-	     * 
-	     * @return the value of the specified attribute name, or null if not found.
-	     */
+	 * Returns the value of the specified attribute key, or null if the
+	 * attribute was not found.
+	 * 
+	 * @param key
+	 *            the attribute key
+	 * 
+	 * @return the value of the specified attribute name, or null if not found.
+	 */
         public Object getAttribute(Object key)
         {
             return attributes[key];
         }
 
         /**
-	     * Removes the attribute with the specified key from this
-	     * ObjectWithDynamicAttributes.
-	     * 
-	     * @param key
-	     *            the attribute key
-	     */
+	 * Removes the attribute with the specified key from this
+	 * ObjectWithDynamicAttributes.
+	 * 
+	 * @param key
+	 *            the attribute key
+	 */
         public void removeAttribute(Object key)
         {
             attributes.Remove(key);

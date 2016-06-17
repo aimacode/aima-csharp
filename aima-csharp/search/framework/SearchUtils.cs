@@ -15,9 +15,9 @@ namespace aima.core.search.framework
      public class SearchUtils
     {
         /**
-	     * Returns the list of actions corresponding to the complete path to the
-	     * given node or NoOp if path length is one.
-	     */    
+	 * Returns the list of actions corresponding to the complete path to the
+	 * given node or NoOp if path length is one.
+	 */    
         public static List<Action> getSequenceOfActions(Node node)
         {
             List<Node> nodes = node.getPathFromRoot();
@@ -64,11 +64,11 @@ namespace aima.core.search.framework
         
 
         /**
-	     * Calls the goal test of the problem and - if the goal test is effectively
-	     * a {@link SolutionChecker} - additionally checks, whether the solution is
-	     * acceptable. Solution checkers can be used to analyze several or all
-	     * solutions with only one search run.
-	     */
+	 * Calls the goal test of the problem and - if the goal test is effectively
+	 * a {@link SolutionChecker} - additionally checks, whether the solution is
+	 * acceptable. Solution checkers can be used to analyze several or all
+	 * solutions with only one search run.
+	 */
         public static bool isGoalState(Problem p, Node n)
         {
             bool isGoal = false;

@@ -22,13 +22,13 @@ namespace aima.core.agent.impl
         }
 
         /**
-	     * Constructs a DynamicPercept with one attribute
-	     * 
-	     * @param key1
-	     *            the attribute key
-	     * @param value1
-	     *            the attribute value
-	     */
+	 * Constructs a DynamicPercept with one attribute
+	 * 
+	 * @param key1
+	 *            the attribute key
+	 * @param value1
+	 *            the attribute value
+	 */
         public DynamicPercept(Object key1, Object value1)
         {
             setAttribute(key1, value1);
@@ -54,13 +54,13 @@ namespace aima.core.agent.impl
         }
 
         /**
-	     * Constructs a DynamicPercept with an array of attributes
-	     * 
-	     * @param keys
-	     *            the array of attribute keys
-	     * @param values
-	     *            the array of attribute values
-	     */
+	 * Constructs a DynamicPercept with an array of attributes
+	 * 
+	 * @param keys
+	 *            the array of attribute keys
+	 * @param values
+	 *            the array of attribute values
+	 */
         public DynamicPercept(Object[] keys, Object[] values)
         {
             Debug.Assert(keys.Length == values.Length);

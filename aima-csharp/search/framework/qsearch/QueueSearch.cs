@@ -38,8 +38,8 @@ namespace aima.core.search.framework.qsearch
         }
 
         /**
-	     * Returns a list of actions to the goal if the goal was found, a list
-	     * containing a single NoOp Action if already at the goal, or an empty list
+	 * Returns a list of actions to the goal if the goal was found, a list
+	 * containing a single NoOp Action if already at the goal, or an empty list
     	 * if the goal could not be found. This template method provides a base for
     	 * tree and graph search implementations. It can be customized by overriding
     	 * some primitive operations, especially {@link #addToFrontier(Node)},
@@ -101,38 +101,38 @@ namespace aima.core.search.framework.qsearch
             return SearchUtils.failure();
         }
         /**
-	     * Primitive operation which inserts the node at the tail of the frontier.
-	     */
+	 * Primitive operation which inserts the node at the tail of the frontier.
+	 */
         protected abstract void addToFrontier(Node node);
 
         /**
-	     * Primitive operation which removes and returns the node at the head of the
-	     * frontier.
-	     * 
-	     * @return the node at the head of the frontier.
-	     */
+	 * Primitive operation which removes and returns the node at the head of the
+	 * frontier.
+	 * 
+	 * @return the node at the head of the frontier.
+	 */
         protected abstract Node removeFromFrontier();
 
         /**
-	     * Primitive operation which checks whether the frontier contains not yet
-	     * expanded nodes.
-	     */
+	 * Primitive operation which checks whether the frontier contains not yet
+	 * expanded nodes.
+	 */
         protected abstract bool isFrontierEmpty();
 
         /**
-	     * Enables optimization for FIFO queue based search, especially breadth
-	     * first search.
-	     * 
-	     * @param state
-	     */
+	 * Enables optimization for FIFO queue based search, especially breadth
+	 * first search.
+	 * 
+	 * @param state
+	 */
         public void setEarlyGoalCheck(bool state)
         {
             this.earlyGoalCheck = state;
         }
 
         /**
-	     * Returns all the search metrics.
-	     */
+	 * Returns all the search metrics.
+	 */
         public virtual Metrics getMetrics()
         {
             metrics.set(METRIC_NODES_EXPANDED, nodeExpander.getNumOfExpandCalls());
@@ -140,8 +140,8 @@ namespace aima.core.search.framework.qsearch
         }
 
         /**
-	     * Sets all metrics to zero.
-	     */
+	 * Sets all metrics to zero.
+	 */
         public void clearInstrumentation()
         {
             nodeExpander.resetCounter();

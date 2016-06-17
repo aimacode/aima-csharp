@@ -33,12 +33,12 @@ namespace aima.core.agent.impl.aprog
         private HashSet<Rule> rules;
 
         /**
-	     * Constructs a SimpleReflexAgentProgram with a set of condition-action
-	     * rules.
-	     * 
-	     * @param ruleSet
-	     *            a set of condition-action rules
-	     */
+	 * Constructs a SimpleReflexAgentProgram with a set of condition-action
+	 * rules.
+	 * 
+	 * @param ruleSet
+	 *            a set of condition-action rules
+	 */
          public SimpleReflexAgentProgram(HashSet<Rule> ruleSet)
         {
             rules = ruleSet;

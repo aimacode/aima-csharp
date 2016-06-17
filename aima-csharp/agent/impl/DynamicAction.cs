@@ -18,10 +18,10 @@ namespace aima.core.agent.impl
         }
 
         /**
-	     * Returns the value of the name attribute.
-	     * 
-	     * @return the value of the name attribute.
-	     */
+	 * Returns the value of the name attribute.
+	 * 
+	 * @return the value of the name attribute.
+	 */
         public String getName()
         {
             return (System.String)getAttribute(ATTRIBUTE_NAME);

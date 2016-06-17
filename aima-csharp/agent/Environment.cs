@@ -14,10 +14,10 @@ namespace aima.core.agent
     public interface Environment
     {
         /**
-	     * Returns the Agents belonging to this Environment.
-	     * 
-	     * @return The Agents belonging to this Environment.
-	     */
+	 * Returns the Agents belonging to this Environment.
+	 * 
+	 * @return The Agents belonging to this Environment.
+	 */
         List<Agent> getAgents();
         
         /**
@@ -37,18 +37,18 @@ namespace aima.core.agent
         void removeAgent(Agent agent);
          
         /**
-	     * Returns the EnvironmentObjects that exist in this Environment.
-	     * 
-	     * @return the EnvironmentObjects that exist in this Environment.
-	     */
+	 * Returns the EnvironmentObjects that exist in this Environment.
+	 * 
+	 * @return the EnvironmentObjects that exist in this Environment.
+	 */
         List<EnvironmentObject> getEnvironmentObjects();
 
         /**
-	     * Add an EnvironmentObject to the Environment.
-	     * 
-	     * @param eo
-	     *            the EnvironmentObject to be added.
-	     */
+	 * Add an EnvironmentObject to the Environment.
+	 * 
+	 * @param eo
+	 *            the EnvironmentObject to be added.
+	 */
         void addEnvironmentObject(EnvironmentObject eo);
 
         /**
@@ -78,12 +78,12 @@ namespace aima.core.agent
         void stepUntilDone();
 
         /**
-	     * Returns <code>true</code> if the Environment is finished with its current
-	     * task(s).
-	     * 
-	     * @return <code>true</code> if the Environment is finished with its current
-	     *         task(s).
-	     */
+	 * Returns <code>true</code> if the Environment is finished with its current
+	 * task(s).
+	 * 
+	 * @return <code>true</code> if the Environment is finished with its current
+	 *         task(s).
+	 */
         bool isDone();
 
         /**

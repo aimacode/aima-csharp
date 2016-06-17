@@ -43,11 +43,11 @@ namespace aima.core.search.framework
         private double pathCost;
 
         /**
-	     * Constructs a node with the specified state.
-	     * 
-	     * @param state
-	     *            the state in the state space to which the node corresponds.
-	     */
+	 * Constructs a node with the specified state.
+	 * 
+	 * @param state
+	 *            the state in the state space to which the node corresponds.
+         */
         public Node(System.Object state)
         {
             this.state = state;
@@ -55,12 +55,12 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * Constructs a node with the specified state, parent, action, and path
-	     * cost.
-	     * 
-	     * @param state
-	     *            the state in the state space to which the node corresponds.
-	     * @param parent
+	 * Constructs a node with the specified state, parent, action, and path
+	 * cost.
+	 * 
+	 * @param state
+	 *            the state in the state space to which the node corresponds.
+	 * @param parent
     	 *            the node in the search tree that generated the node.
     	 * @param action
     	 *            the action that was applied to the parent to generate the
@@ -78,10 +78,10 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * Returns the state in the state space to which the node corresponds.
-	     * 
-	     * @return the state in the state space to which the node corresponds.
-	     */
+	 * Returns the state in the state space to which the node corresponds.
+	 * 
+	 * @return the state in the state space to which the node corresponds.
+	 */
         public System.Object getState()
         {
             return state;
@@ -98,8 +98,8 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * Returns the action that was applied to the parent to generate the node.
-	     * 
+	 * Returns the action that was applied to the parent to generate the node.
+	 * 
     	 * @return the action that was applied to the parent to generate the node.
     	 */
         public Action getAction()
@@ -108,10 +108,10 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * Returns the cost of the path from the initial state to this node as
-	     * indicated by the parent pointers.
+	 * Returns the cost of the path from the initial state to this node as
+	 * indicated by the parent pointers.
     	 * 
-	     * @return the cost of the path from the initial state to this node as
+	 * @return the cost of the path from the initial state to this node as
     	 *         indicated by the parent pointers.
     	 */
         public double getPathCost()
@@ -120,18 +120,18 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * Returns <code>true</code> if the node has no parent.
-	     * 
-	     * @return <code>true</code> if the node has no parent.
-	     */
+	 * Returns <code>true</code> if the node has no parent.
+	 * 
+	 * @return <code>true</code> if the node has no parent.
+	 */
         public bool isRootNode()
         {
             return parent == null;
         }
 
         /**
-	     * Returns the path from the root node to this node.
-	     * 
+	 * Returns the path from the root node to this node.
+	 * 
     	 * @return the path from the root node to this node.
     	 */
         public List<Node> getPathFromRoot()

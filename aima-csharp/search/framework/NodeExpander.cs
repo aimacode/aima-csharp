@@ -22,17 +22,17 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * Computes the path cost for getting from the root node state via the
-	     * parent node state to the specified state, creates a new node for the
-	     * specified state, adds it as child of the provided parent, and returns it.
-	     */
+	 * Computes the path cost for getting from the root node state via the
+	 * parent node state to the specified state, creates a new node for the
+	 * specified state, adds it as child of the provided parent, and returns it.
+	 */
          public Node createNode(System.Object state, Node parent, Action action, double stepCost)
         {
             return new Node(state, parent, action, parent.getPathCost() + stepCost);
         }
 
         /**
-	     * Returns the children obtained from expanding the specified node in the
+	 * Returns the children obtained from expanding the specified node in the
     	 * specified problem.
     	 * 
     	 * @param node
@@ -76,9 +76,9 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * All node listeners added to this list get informed whenever a node is
-	     * expanded.
-	     */
+	 * All node listeners added to this list get informed whenever a node is
+	 * expanded.
+	 */
         private List<NodeListener> nodeListeners = new List<NodeListener>();
 
         /** Counts the number of {@link #expand(Node, Problem)} calls. */
@@ -86,8 +86,8 @@ namespace aima.core.search.framework
 
         /**
     	 * Adds a listener to the list of node listeners. It is informed whenever a
-	     * node is expanded during search.
-	     */
+	 * node is expanded during search.
+	 */
         public void addNodeListener(NodeListener listener)
         {
             nodeListeners.Add(listener);
@@ -102,9 +102,9 @@ namespace aima.core.search.framework
         }
 
         /**
-	     * Returns the number of {@link #expand(Node, Problem)} calls since the last
-	     * counter reset.
-	     */
+	 * Returns the number of {@link #expand(Node, Problem)} calls since the last
+	 * counter reset.
+	 */
         public int getNumOfExpandCalls()
         {
             return counter;

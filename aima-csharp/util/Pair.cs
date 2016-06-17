@@ -29,7 +29,7 @@ namespace aima.core.util
         }
 
         /**
-	     * Returns the first element of the pair
+	 * Returns the first element of the pair
     	 * 
     	 * @return the first element of the pair
     	 */
@@ -39,10 +39,10 @@ namespace aima.core.util
         }
 
         /**
-	     * Returns the second element of the pair
-	     * 
-	     * @return the second element of the pair
-	     */
+         * Returns the second element of the pair
+	 * 
+	 * @return the second element of the pair
+	 */
         public Y getSecond()
         {
             return b;

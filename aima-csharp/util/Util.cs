@@ -19,13 +19,13 @@ namespace aima.core.util
         private static Random r = new Random();
 
         /**
-	     * Get the first element from a list.
-	     * 
+	 * Get the first element from a list.
+	 * 
     	 * @param l
     	 *            the list the first element is to be extracted from.
     	 * @return the first element of the passed in list.
     	 */
-         public static T first<T>(List<T> l)
+        public static T first<T>(List<T> l)
         {
             return l[0];
         }

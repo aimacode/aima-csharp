@@ -10,7 +10,7 @@ namespace aima.core.util
      * @author Ravi Mohan
      * @author Mike Stampone
      */
-     public class FrequencyCounter<T>
+    public class FrequencyCounter<T>
     {
         private Dictionary<T, int> counter;
         private int total;
@@ -25,15 +25,15 @@ namespace aima.core.util
         }
 
         /**
-	     * Returns the count to which the specified key is mapped in this frequency
-	     * counter, or 0 if the map contains no mapping for this key.
-	     * 
-	     * @param key
-	     *            the key whose associated count is to be returned.
-	     * 
-	     * @return the count to which this map maps the specified key, or 0 if the
-	     *         map contains no mapping for this key.
-	     */
+	 * Returns the count to which the specified key is mapped in this frequency
+	 * counter, or 0 if the map contains no mapping for this key.
+	 * 
+	 * @param key
+	 *            the key whose associated count is to be returned.
+	 * 
+	 * @return the count to which this map maps the specified key, or 0 if the
+	 *         map contains no mapping for this key.
+	 */
         public int getCount(T key)
         {
             int value = counter[key];
@@ -45,12 +45,12 @@ namespace aima.core.util
         }
 
         /**
-	     * Increments the count to which the specified key is mapped in this
-	     * frequency counter, or puts 1 if the map contains no mapping for this key.
-	     * 
-	     * @param key
-	     *            the key whose associated count is to be returned.
-	     */
+	 * Increments the count to which the specified key is mapped in this
+	 * frequency counter, or puts 1 if the map contains no mapping for this key.
+	 * 
+	 * @param key
+	 *            the key whose associated count is to be returned.
+	 */
         public void incrementFor(T key)
         {
             int value = counter[key];
@@ -67,11 +67,11 @@ namespace aima.core.util
         }
 
         /**
-	     * Returns the count to which the specified key is mapped in this frequency
-	     * counter, divided by the total of all counts.
-	     * 
-	     * @param key
-	     *            the key whose associated count is to be divided.
+	 * Returns the count to which the specified key is mapped in this frequency
+	 * counter, divided by the total of all counts.
+	 * 
+	 * @param key
+	 *            the key whose associated count is to be divided.
     	 * 
     	 * @return the count to which this map maps the specified key, divided by
     	 *         the total count.
@@ -95,8 +95,8 @@ namespace aima.core.util
         }
 
         /**
-	     * 
-	     * @return a set of objects for which frequency counts have been recorded.
+	 * 
+	 * @return a set of objects for which frequency counts have been recorded.
     	 */
         public HashSet<T> getStates()
         {
@@ -104,8 +104,8 @@ namespace aima.core.util
         }
 
         /**
-	     * Remove all the currently recorded frequency counts.
-	     */
+	 * Remove all the currently recorded frequency counts.
+	 */
         public void clear()
         {
             counter.Clear();

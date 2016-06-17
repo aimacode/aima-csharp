@@ -12,21 +12,21 @@ namespace aima.core.util
     {
         private X x;
 
-	    private Y y;
+	private Y y;
 
-	    private Z z;
+        private Z z;
 
-	    /**
-	     * Constructs a triplet with three specified elements.
-	     * 
-	     * @param x
-	     *            the first element of the triplet.
-	     * @param y
-	     *            the second element of the triplet.
-	     * @param z
-	     *            the third element of the triplet.
-	     */
-	    public Triplet(X x, Y y, Z z)
+	/**
+	 * Constructs a triplet with three specified elements.
+	 * 
+	 * @param x
+	 *            the first element of the triplet.
+	 * @param y
+	 *            the second element of the triplet.
+	 * @param z
+	 *            the third element of the triplet.
+	 */
+	public Triplet(X x, Y y, Z z)
         {
             this.x = x;
             this.y = y;
@@ -34,20 +34,20 @@ namespace aima.core.util
         }
 
         /**
-	     * Returns the second element of the triplet.
-	     * 
-	     * @return the second element of the triplet.
-	     */
+	 * Returns the second element of the triplet.
+	 * 
+	 * @return the second element of the triplet.
+	 */
         public Y getSecond()
         {
             return y;
         }
 
         /**
-	     * Returns the third element of the triplet.
-	     * 
-	     * @return the third element of the triplet.
-	     */
+	 * Returns the third element of the triplet.
+	 * 
+	 * @return the third element of the triplet.
+	 */
         public Z getThird()
         {
             return z;

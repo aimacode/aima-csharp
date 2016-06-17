@@ -12,9 +12,9 @@ namespace aima.core.search.framework.problem
     {
 
 
-    public double c(System.Object stateFrom, Action action, System.Object stateTo)
-    {
-        return 1;
+        public double c(System.Object stateFrom, Action action, System.Object stateTo)
+        {
+            return 1;
+        }
     }
-}
 }

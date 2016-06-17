@@ -42,10 +42,10 @@ namespace aima.core.agent.impl.aprog.simplerule
         }
 
         /**
-	     * Returns the action of this condition-action rule.
-	     * 
-	     * @return the action of this condition-action rule.
-	     */
+	 * Returns the action of this condition-action rule.
+	 * 
+	 * @return the action of this condition-action rule.
+	 */
         public Action getAction()
         {
             return action;

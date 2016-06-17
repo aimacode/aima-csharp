@@ -16,7 +16,7 @@ namespace aima.core.util
      * @author Ciaran O'Reilly
      * @author Ravi Mohan
      */
-     public class SetOps
+    public class SetOps
     {
         /**
     	 * 
@@ -26,7 +26,7 @@ namespace aima.core.util
     	 * @return the union of s1 and s2. (The union of two sets is the set
     	 *         containing all of the elements contained in either set.)
     	 */
-         public static List<T> union<T>(List<T> s1, List<T> s2)
+        public static List<T> union<T>(List<T> s1, List<T> s2)
         {
             if(s1 == s2)
             {
@@ -38,8 +38,8 @@ namespace aima.core.util
         }
 
         /**
-	     * 
-	     * @param <T>
+         * 
+         * @param <T>
     	 * @param s1
     	 * @param s2
     	 * @return the intersection of s1 and s2. (The intersection of two sets is

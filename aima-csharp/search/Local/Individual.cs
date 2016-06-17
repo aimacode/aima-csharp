@@ -22,8 +22,8 @@ namespace aima.core.search.local
         private int descendants; // for debugging
         
         /**
-	     * Construct an individual using the provided representation.
-	     * 
+	 * Construct an individual using the provided representation.
+	 * 
     	 * @param representation
     	 *            the individual's representation.
     	 */
@@ -33,9 +33,9 @@ namespace aima.core.search.local
         }
 
         /**
-	     * 
-	     * @return the individual's representation.
-	     */
+	 * 
+	 * @return the individual's representation.
+	 */
         public List<A> getRepresentation()
         {
             return representation;
@@ -51,15 +51,15 @@ namespace aima.core.search.local
         }
 
         /**
-	     * Should be called by the genetic algorithm whenever the individual is
-	     * selected to produce a descendant.
-	     */
+	 * Should be called by the genetic algorithm whenever the individual is
+	 * selected to produce a descendant.
+	 */
         public void incDescendants()
         {
             descendants++;
         }
 
-        /** Returns the number of descendants for this individual. */
+        // Returns the number of descendants for this individual.
         public int getDescendants()
         {
             return descendants;

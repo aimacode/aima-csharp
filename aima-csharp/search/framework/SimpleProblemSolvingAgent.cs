@@ -50,7 +50,7 @@ namespace aima.core.search.framework
         private int goalsFormulated = 0;
 
         /**
-	     * Constructs a simple problem solving agent which will formulate goals
+	 * Constructs a simple problem solving agent which will formulate goals
     	 * indefinitely.
     	 */
          public SimpleProblemSolvingAgent()
@@ -64,7 +64,7 @@ namespace aima.core.search.framework
     	 * 
     	 * @param maxGoalsToFormulate
     	 *            the maximum number of goals this agent is to formulate.
-	     */
+	 */
          public SimpleProblemSolvingAgent(int maxGoalsToFormulate)
         {
             formulateGoalsIndefinitely = false;

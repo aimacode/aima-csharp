@@ -52,35 +52,35 @@ namespace aima.core.agent.impl.aprog
         }
 
         /**
-	     * Set the agent's current conception of the world state.
-	     * 
-	     * @param state
-	     *            the agent's current conception of the world state.
-	     */
+	 * Set the agent's current conception of the world state.
+	 * 
+	 * @param state
+	 *            the agent's current conception of the world state.
+	 */
          public void setState(DynamicState dstate)
         {
             state = dstate;
         }
 
         /**
-	     * Set the program's description of how the next state depends on the state
-	     * and action.
-	     * 
-	     * @param model
-	     *            a description of how the next state depends on the current
-	     *            state and action.
-	     */
+	 * Set the program's description of how the next state depends on the state
+	 * and action.
+	 * 
+	 * @param model
+	 *            a description of how the next state depends on the current
+	 *            state and action.
+	 */
          public void setModel(Model mod)
         {
             model = mod;
         }
 
         /**
-	     * Set the program's condition-action rules
-	     * 
-	     * @param ruleSet
-	     *            a set of condition-action rules
-	     */
+	 * Set the program's condition-action rules
+	 * 
+	 * @param ruleSet
+	 *            a set of condition-action rules
+	 */
         public void setRules(HashSet<Rule> ruleSet)
         {
             rules = ruleSet;
@@ -107,8 +107,8 @@ namespace aima.core.agent.impl.aprog
 
         /**
          * Realizations of this class should implement the init() method so that it
-	     * calls the setState(), setModel(), and setRules() method.
-	     */
+	 * calls the setState(), setModel(), and setRules() method.
+	 */
         protected abstract void init();
 
         protected abstract DynamicState updateState(DynamicState state, Action action, Percept percept, Model model);
