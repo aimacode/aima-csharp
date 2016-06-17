@@ -32,7 +32,7 @@ namespace aima.core.search.framework.qsearch
             this.nodeExpander = nodeExpander;
         }
 
-        public NodeExpander getNodeExpander()
+        public virtual NodeExpander getNodeExpander()
         {
             return nodeExpander;
         }
@@ -54,7 +54,7 @@ namespace aima.core.search.framework.qsearch
     	 *         containing a single NoOp Action if already at the goal, or an
     	 *         empty list if the goal could not be found.
     	 */
-         public List<Action> search(Problem problem, Queue<Node> frontier)
+         public virtual List<Action> search(Problem problem, Queue<Node> frontier)
         {
             this.frontier = frontier;
             clearInstrumentation();
@@ -133,7 +133,7 @@ namespace aima.core.search.framework.qsearch
         /**
 	     * Returns all the search metrics.
 	     */
-        public Metrics getMetrics()
+        public virtual Metrics getMetrics()
         {
             metrics.set(METRIC_NODES_EXPANDED, nodeExpander.getNumOfExpandCalls());
             return metrics;
