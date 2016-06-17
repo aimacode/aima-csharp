@@ -100,6 +100,7 @@
     <Compile Include="search\framework\SearchUtils.cs" />
     <Compile Include="search\framework\SimpleProblemSolvingAgent.cs" />
     <Compile Include="search\framework\SolutionChecker.cs" />
+    <Compile Include="search\Local\FitnessFunction.cs" />
     <Compile Include="search\Local\Individual.cs" />
     <Compile Include="search\Local\Scheduler.cs" />
     <Compile Include="util\ArrayIterator.cs" />
