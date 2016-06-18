@@ -94,7 +94,9 @@
     <Compile Include="search\framework\problem\ResultFunction.cs" />
     <Compile Include="search\framework\problem\StepCostFunction.cs" />
     <Compile Include="search\framework\qsearch\GraphSearch.cs" />
+    <Compile Include="search\framework\qsearch\GraphSearchBFS.cs" />
     <Compile Include="search\framework\qsearch\QueueSearch.cs" />
+    <Compile Include="search\framework\qsearch\TreeSearch.cs" />
     <Compile Include="search\framework\Search.cs" />
     <Compile Include="search\framework\SearchAgent.cs" />
     <Compile Include="search\framework\SearchForActions.cs" />
