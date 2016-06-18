@@ -47,7 +47,7 @@ namespace aima.core.search.framework.problem
     	 * @param initialState
     	 *            the initial state that the agent starts in.
     	 * @param actionsFunction
-	     *            a description of the possible actions available to the agent.
+	 *            a description of the possible actions available to the agent.
     	 * @param resultFunction
     	 *            a description of what each action does; the formal name for
     	 *            this is the transition model, specified by a function
