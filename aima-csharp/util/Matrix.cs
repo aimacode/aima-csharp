@@ -663,6 +663,581 @@ namespace aima.core.util
 	    return f;
 	}
 
+	/**
+	 * Two norm
+	 * 
+	 * @return maximum singular value.
+	 */
 
+	// public double norm2 () {
+	// return (new SingularValueDecomposition(this).norm2());
+	// }
+	/**
+	 * Infinity norm
+	 * 
+	 * @return maximum row sum.
+	 */
+
+	public double normInf()
+	{
+	    double f = 0;
+	    for (int i = 0; i < m; i++)
+	    {
+		double s = 0;
+		for (int j = 0; j < n; j++)
+		{
+		    s += Math.Abs(A[i][j]);
+		}
+		f = Math.Max(f, s);
+	    }
+	    return f;
+	}
+
+	/**
+	 * Frobenius norm
+	 * 
+	 * @return sqrt of sum of squares of all elements.
+	 */
+
+	// public double normF () {
+	// double f = 0;
+	// for (int i = 0; i < m; i++) {
+	// for (int j = 0; j < n; j++) {
+	// f = Maths.hypot(f,A[i][j]);
+	// }
+	// }
+	// return f;
+	// }
+	/**
+	 * Unary minus
+	 * 
+	 * @return -A
+	 */
+
+	public Matrix uminus()
+	{
+	    Matrix X = new Matrix(m, n);
+	    double[][] C = X.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    C[i][j] = -A[i][j];
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * C = A + B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A + B
+	 */
+
+	public Matrix plus(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    Matrix X = new Matrix(m, n);
+	    double[][] C = X.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    C[i][j] = A[i][j] + B.A[i][j];
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * A = A + B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A + B
+	 */
+
+	public Matrix plusEquals(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    A[i][j] = A[i][j] + B.A[i][j];
+		}
+	    }
+	    return this;
+	}
+
+	/**
+	 * C = A - B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A - B
+	 */
+
+	public Matrix minus(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    Matrix X = new Matrix(m, n);
+	    double[][] C = X.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    C[i][j] = A[i][j] - B.A[i][j];
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * A = A - B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A - B
+	 */
+
+	public Matrix minusEquals(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    A[i][j] = A[i][j] - B.A[i][j];
+		}
+	    }
+	    return this;
+	}
+
+	/**
+	 * Element-by-element multiplication, C = A.*B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A.*B
+	 */
+
+	public Matrix arrayTimes(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    Matrix X = new Matrix(m, n);
+	    double[][] C = X.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    C[i][j] = A[i][j] * B.A[i][j];
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * Element-by-element multiplication in place, A = A.*B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A.*B
+	 */
+
+	public Matrix arrayTimesEquals(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    A[i][j] = A[i][j] * B.A[i][j];
+		}
+	    }
+	    return this;
+	}
+
+	/**
+	 * Element-by-element right division, C = A./B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A./B
+	 */
+
+	public Matrix arrayRightDivide(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    Matrix X = new Matrix(m, n);
+	    double[][] C = X.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    C[i][j] = A[i][j] / B.A[i][j];
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * Element-by-element right division in place, A = A./B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A./B
+	 */
+
+	public Matrix arrayRightDivideEquals(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    A[i][j] = A[i][j] / B.A[i][j];
+		}
+	    }
+	    return this;
+	}
+
+	/**
+	 * Element-by-element left division, C = A.\B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A.\B
+	 */
+
+	public Matrix arrayLeftDivide(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    Matrix X = new Matrix(m, n);
+	    double[][] C = X.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    C[i][j] = B.A[i][j] / A[i][j];
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * Element-by-element left division in place, A = A.\B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return A.\B
+	 */
+
+	public Matrix arrayLeftDivideEquals(Matrix B)
+	{
+	    checkMatrixDimensions(B);
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    A[i][j] = B.A[i][j] / A[i][j];
+		}
+	    }
+	    return this;
+	}
+
+	/**
+	 * Multiply a matrix by a scalar, C = s*A
+	 * 
+	 * @param s
+	 *            scalar
+	 * @return s*A
+	 */
+
+	public Matrix times(double s)
+	{
+	    Matrix X = new Matrix(m, n);
+	    double[][] C = X.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    C[i][j] = s * A[i][j];
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * Multiply a matrix by a scalar in place, A = s*A
+	 * 
+	 * @param s
+	 *            scalar
+	 * @return replace A by s*A
+	 */
+
+	public Matrix timesEquals(double s)
+	{
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    A[i][j] = s * A[i][j];
+		}
+	    }
+	    return this;
+	}
+
+	/**
+	 * Linear algebraic matrix multiplication, A * B
+	 * 
+	 * @param B
+	 *            another matrix
+	 * @return Matrix product, A * B
+	 * @exception IllegalArgumentException
+	 *                Matrix inner dimensions must agree.
+	 */
+
+	public Matrix times(Matrix B)
+	{
+	    if (B.m != n)
+	    {
+		throw new ArgumentException(
+				"Matrix inner dimensions must agree.");
+	    }
+	    Matrix X = new Matrix(m, B.n);
+	    double[][] C = X.getArray();
+	    double[] Bcolj = new double[n];
+	    for (int j = 0; j < B.n; j++)
+	    {
+		for (int k = 0; k < n; k++)
+		{
+		    Bcolj[k] = B.A[k][j];
+		}
+		for (int i = 0; i < m; i++)
+		{
+		    double[] Arowi = A[i];
+		    double s = 0;
+		    for (int k = 0; k < n; k++)
+		    {
+			s += Arowi[k] * Bcolj[k];
+		    }
+		    C[i][j] = s;
+		}
+	    }
+	    return X;
+	}
+
+	/**
+	 * LU Decomposition
+	 * 
+	 * @return LUDecomposition
+	 * @see LUDecomposition
+	 */
+
+	public LUDecomposition lu()
+	{
+	    return new LUDecomposition(this);
+	}
+
+	// /** QR Decomposition
+	// @return QRDecomposition
+	// @see QRDecomposition
+	// */
+	//
+	// public QRDecomposition qr () {
+	// return new QRDecomposition(this);
+	// }
+	//
+	// /** Cholesky Decomposition
+	// @return CholeskyDecomposition
+	// @see CholeskyDecomposition
+	// */
+	//
+	// public CholeskyDecomposition chol () {
+	// return new CholeskyDecomposition(this);
+	// }
+	//
+	// /** Singular Value Decomposition
+	// @return SingularValueDecomposition
+	// @see SingularValueDecomposition
+	// */
+	//
+	// public SingularValueDecomposition svd () {
+	// return new SingularValueDecomposition(this);
+	// }
+	//
+	// /** Eigenvalue Decomposition
+	// @return EigenvalueDecomposition
+	// @see EigenvalueDecomposition
+	// */
+	//
+	// public EigenvalueDecomposition eig () {
+	// return new EigenvalueDecomposition(this);
+	// }
+
+	/**
+	 * Solve A*X = B
+	 * 
+	 * @param B
+	 *            right hand side
+	 * @return solution if A is square, least squares solution otherwise
+	 */
+
+	public Matrix solve(Matrix B)
+	{
+	    // assumed m == n
+	    return new LUDecomposition(this).solve(B);
+	}
+
+	/**
+	 * Solve X*A = B, which is also A'*X' = B'
+	 * 
+	 * @param B
+	 *            right hand side
+	 * @return solution if A is square, least squares solution otherwise.
+	 */
+
+	public Matrix solveTranspose(Matrix B)
+	{
+	    return transpose().solve(B.transpose());
+	}
+
+	/**
+	 * Matrix inverse or pseudoinverse
+	 * 
+	 * @return inverse(A) if A is square, pseudoinverse otherwise.
+	 */
+
+	public Matrix inverse()
+	{
+	    return solve(identity(m, m));
+	}
+
+	/**
+	 * Matrix determinant
+	 * 
+	 * @return determinant
+	 */
+
+	public double det()
+	{
+	    return new LUDecomposition(this).det();
+	}
+
+	/**
+	 * Matrix rank
+	 * 
+	 * @return effective numerical rank, obtained from SVD.
+	 */
+
+	// public int rank () {
+	// return new SingularValueDecomposition(this).rank();
+	// }
+	//
+	// /** Matrix condition (2 norm)
+	// @return ratio of largest to smallest singular value.
+	// */
+	//
+	// public double cond () {
+	// return new SingularValueDecomposition(this).cond();
+	// }
+	/**
+	 * Matrix trace.
+	 * 
+	 * @return sum of the diagonal elements.
+	 */
+
+	public double trace()
+	{
+	    double t = 0;
+	    for (int i = 0; i < Math.Min(m, n); i++)
+	    {
+		t += A[i][i];
+	    }
+	    return t;
+	}
+
+	/**
+	 * Generate matrix with random elements
+	 * 
+	 * @param m
+	 *            Number of rows.
+	 * @param n
+	 *            Number of colums.
+	 * @return An m-by-n matrix with uniformly distributed random elements.
+	 */
+
+	public static Matrix random(int m, int n)
+	{
+	    Matrix A = new Matrix(m, n);
+	    Random r = new Random();
+	    double[][] X = A.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    X[i][j] = r.NextDouble();
+		}
+	    }
+	    return A;
+	}
+
+	/**
+	 * Generate identity matrix
+	 * 
+	 * @param m
+	 *            Number of rows.
+	 * @param n
+	 *            Number of colums.
+	 * @return An m-by-n matrix with ones on the diagonal and zeros elsewhere.
+	 */
+
+	public static Matrix identity(int m, int n)
+	{
+	    Matrix A = new Matrix(m, n);
+	    double[][] X = A.getArray();
+	    for (int i = 0; i < m; i++)
+	    {
+		for (int j = 0; j < n; j++)
+		{
+		    X[i][j] = (i == j ? 1.0 : 0.0);
+		}
+	    }
+	    return A;
+	}
+
+	public String toString()
+	{
+	    StringBuilder buf = new StringBuilder();
+	    for (int i = 0; i < getRowDimension(); i++)
+	    {
+
+		for (int j = 0; j < getColumnDimension(); j++)
+		{
+		    buf.Append(get(i, j));
+		    buf.Append(" ");
+		}
+		buf.Append("\n");
+	    }
+
+	    return buf.ToString();
+	}
+
+	/*
+	 * ------------------------ Private Methods ------------------------
+	 */
+
+	/** Check if size(A) == size(B) * */
+
+	private void checkMatrixDimensions(Matrix B)
+	{
+	    if (B.m != m || B.n != n)
+	    {
+		throw new ArgumentException("Matrix dimensions must agree.");
+	    }
+	}
     }
 }
