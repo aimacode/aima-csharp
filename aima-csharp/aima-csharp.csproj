@@ -112,6 +112,7 @@
     <Compile Include="util\FrequencyCounter.cs" />
     <Compile Include="util\Interval.cs" />
     <Compile Include="util\LinkedHashSet.cs" />
+    <Compile Include="util\Matrix.cs" />
     <Compile Include="util\MixedRadixNumber.cs" />
     <Compile Include="util\MockRandomizer.cs" />
     <Compile Include="util\Pair.cs" />
