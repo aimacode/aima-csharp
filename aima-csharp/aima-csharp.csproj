@@ -124,6 +124,7 @@
     <Compile Include="util\Triplet.cs" />
     <Compile Include="util\TwoKeyHashMap.cs" />
     <Compile Include="util\Util.cs" />
+    <Compile Include="util\Vector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
