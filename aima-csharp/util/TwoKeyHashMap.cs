@@ -61,14 +61,15 @@ namespace aima.core.util
 	 *         <code>null</code> if the map contains no mapping for this key
 	 *         pair.
 	 */
-	public V get(K1 key1, K2 key2, V value) //Needs to be looked into.
-	{	    
-	    if (base.ContainsKey(new Pair<K1, K2>(key1, key2)))
+	public V get(K1 key1, K2 key2)
+	{
+	    V value;
+	    if(base.TryGetValue(new Pair<K1, K2>(key1, key2), out value))
 	    {
 		return value;
 	    }
 
-	    return value;	    
+	    return value;
 	}
 
 	/**

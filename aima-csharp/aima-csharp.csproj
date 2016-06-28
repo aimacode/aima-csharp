@@ -106,6 +106,7 @@
     <Compile Include="search\Local\FitnessFunction.cs" />
     <Compile Include="search\Local\Individual.cs" />
     <Compile Include="search\Local\Scheduler.cs" />
+    <Compile Include="search\online\OnlineDFSAgent.cs" />
     <Compile Include="search\online\OnlineSearchProblem.cs" />
     <Compile Include="util\ArrayIterator.cs" />
     <Compile Include="util\CSharpRandomizer.cs" />
