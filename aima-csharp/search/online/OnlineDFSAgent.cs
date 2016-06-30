@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
@@ -44,15 +43,15 @@ namespace aima.core.search.online
     {
 	private OnlineSearchProblem problem;
 	private PerceptToStateFunction ptsFunction;
-	private readonly TwoKeyHashMap<Object, agent.Action, Object> result = new TwoKeyHashMap<Object, agent.Action, Object>();
+	private readonly TwoKeyHashMap<object, Action, object> result = new TwoKeyHashMap<object, Action, object>();
 	// untried, a table that lists, for each state, the actions not yet tried
-	private readonly Dictionary<Object, List<agent.Action>> untried = new Dictionary<Object, List<agent.Action>>();
+	private readonly Dictionary<object, List<agent.Action>> untried = new Dictionary<object, List<Action>>();
 	// unbacktracked, a table that lists,
 	// for each state, the backtracks not yet tried
-	private readonly Dictionary<Object, List<Object>> unbacktracked = new Dictionary<Object, List<Object>>();
+	private readonly Dictionary<object, List<object>> unbacktracked = new Dictionary<object, List<object>>();
 	// s, a, the previous state and action, initially null
-	private Object s = null;
-	private agent.Action a = null;
+	private object s = null;
+	private Action a = null;
 
 	/**
 	 * Constructs an online DFS agent with the specified search problem and
@@ -117,9 +116,9 @@ namespace aima.core.search.online
 
 	// function ONLINE-DFS-AGENT(s') returns an action
 	// inputs: s', a percept that identifies the current state
-	public override agent.Action execute(Percept psDelta)
+	public override Action execute(Percept psDelta)
 	{
-	    Object sDelta = ptsFunction.getState(psDelta);
+	    object sDelta = ptsFunction.getState(psDelta);
 	    // if GOAL-TEST(s') then return stop
 	    if (goalTest(sDelta))
 	    {
@@ -149,7 +148,7 @@ namespace aima.core.search.online
 			// Ensure the unbacktracked always has a list for s'
 			if (!unbacktracked.ContainsKey(sDelta))
 			{
-			    unbacktracked.Add(sDelta, new List<Object>());
+			    unbacktracked.Add(sDelta, new List<object>());
 			}
 
 			// add s to the front of the unbacktracked[s']
@@ -169,8 +168,8 @@ namespace aima.core.search.online
 		    {
 			// else a <- an action b such that result[s', b] =
 			// POP(unbacktracked[s'])
-			Object popped = unbacktracked[sDelta].Remove(0);
-			foreach (Pair<Object, agent.Action> sa in result.Keys)
+			object popped = unbacktracked[sDelta].Remove(0);
+			foreach(Pair<object, Action> sa in result.Keys)
 			{
 			    if (sa.getFirst().Equals(sDelta) && result[sa].Equals(popped))
 			    {
@@ -212,14 +211,14 @@ namespace aima.core.search.online
 	    a = null;
 	}
 
-	private bool goalTest(Object state)
+	private bool goalTest(object state)
 	{
 	    return getProblem().isGoalState(state);
 	}
 
-	private List<agent.Action> actions(Object state)
+	private List<Action> actions(object state)
 	{
-	    return new List<agent.Action>(problem.getActionsFunction()
+	    return new List<Action>(problem.getActionsFunction()
 			    .actions(state));
 	}
     }
