@@ -113,6 +113,7 @@
     <Compile Include="util\CSharpRandomizer.cs" />
     <Compile Include="util\FrequencyCounter.cs" />
     <Compile Include="util\Interval.cs" />
+    <Compile Include="util\LabeledGraph.cs" />
     <Compile Include="util\LinkedHashSet.cs" />
     <Compile Include="util\LUDecomposition.cs" />
     <Compile Include="util\Matrix.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="util\TwoKeyHashMap.cs" />
     <Compile Include="util\Util.cs" />
     <Compile Include="util\Vector.cs" />
+    <Compile Include="util\XYLocation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
