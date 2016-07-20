@@ -103,7 +103,8 @@ namespace aima.core.environment.cellworld
 	    Dictionary<int, Cell<C>> xCol = cellLookup[x];
 	    if (null != xCol)
 	    {
-		//cells.Remove(xCol.Remove(y));
+		xCol.Remove(y);
+		cells.Remove(xCol[y]);
 	    }
 	}
 
