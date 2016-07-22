@@ -32,16 +32,8 @@ namespace aima.core.environment.cellworld
 
 	public enum ActionEnum
 	{
-	    Up
-	    ,
-	    Down
-	    ,
-	    Left
-	    ,
-	    Right
-	    ,
-	    None
-	}
+	    Up, Down, Left, Right, None
+	};
 
 	private ActionEnum _action;
 
