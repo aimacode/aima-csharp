@@ -76,7 +76,9 @@
     <Compile Include="environment\cellworld\CellWorld.cs" />
     <Compile Include="environment\cellworld\CellWorldAction.cs" />
     <Compile Include="environment\cellworld\CellWorldFactory.cs" />
+    <Compile Include="environment\eightpuzzle\BidirectionalEightPuzzleProblem.cs" />
     <Compile Include="environment\eightpuzzle\EightPuzzleBoard.cs" />
+    <Compile Include="environment\eightpuzzle\EightPuzzleFunctionFactory.cs" />
     <Compile Include="environment\eightpuzzle\EightPuzzleGoalTest.cs" />
     <Compile Include="environment\eightpuzzle\ManhattanHeuristicFunction.cs" />
     <Compile Include="environment\eightpuzzle\MisplacedTilleHeuristicFunction.cs" />
