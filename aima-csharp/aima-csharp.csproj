@@ -83,7 +83,13 @@
     <Compile Include="environment\eightpuzzle\ManhattanHeuristicFunction.cs" />
     <Compile Include="environment\eightpuzzle\MisplacedTilleHeuristicFunction.cs" />
     <Compile Include="environment\map\AdaptableHeuristicFunction.cs" />
+    <Compile Include="environment\map\BidirectionalMapProblem.cs" />
+    <Compile Include="environment\map\DynAttributeNames.cs" />
     <Compile Include="environment\map\Map.cs" />
+    <Compile Include="environment\map\MapAgent.cs" />
+    <Compile Include="environment\map\MapFunctionFactory.cs" />
+    <Compile Include="environment\map\MapStepCostFunction.cs" />
+    <Compile Include="environment\map\MoveToAction.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
