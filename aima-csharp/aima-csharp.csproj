@@ -85,8 +85,11 @@
     <Compile Include="environment\map\AdaptableHeuristicFunction.cs" />
     <Compile Include="environment\map\BidirectionalMapProblem.cs" />
     <Compile Include="environment\map\DynAttributeNames.cs" />
+    <Compile Include="environment\map\ExtendableMap.cs" />
     <Compile Include="environment\map\Map.cs" />
     <Compile Include="environment\map\MapAgent.cs" />
+    <Compile Include="environment\map\MapEnvironment.cs" />
+    <Compile Include="environment\map\MapEnvironmentState.cs" />
     <Compile Include="environment\map\MapFunctionFactory.cs" />
     <Compile Include="environment\map\MapStepCostFunction.cs" />
     <Compile Include="environment\map\MoveToAction.cs" />
