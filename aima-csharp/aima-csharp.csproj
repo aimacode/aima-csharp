@@ -159,6 +159,7 @@
     <Compile Include="search\online\OnlineSearchProblem.cs" />
     <Compile Include="util\ArrayIterator.cs" />
     <Compile Include="util\CSharpRandomizer.cs" />
+    <Compile Include="util\DisjointSets.cs" />
     <Compile Include="util\FrequencyCounter.cs" />
     <Compile Include="util\Interval.cs" />
     <Compile Include="util\LabeledGraph.cs" />
