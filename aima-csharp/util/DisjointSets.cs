@@ -110,15 +110,15 @@ namespace aima.core.util
 	 *             disjoint set (i.e. makeSet() was not called for the argument
 	 *             beforehand).
 	 */
-	public union(E element1, E element2)
+	public void union(E element1, E element2)
 	{
-	    ICollection<E> set1 = elementToSet[element1];
+	    HashSet<E> set1 = elementToSet[element1];
 	    if (set1 == null)
 	    {
 		throw new ArgumentException(
 				"element 1 is not associated with a disjoint set, call makeSet() first.");
 	    }
-	    ICollection<E> set2 = elementToSet[element2];
+	    HashSet<E> set2 = elementToSet[element2];
 	    if (set2 == null)
 	    {
 		throw new ArgumentException(
@@ -132,7 +132,8 @@ namespace aima.core.util
 		    set2.Union(set1);
 		    foreach (E element in set1)
 		    {
-			disjointSets.Remove(elementToSet.Add(element, set2));
+			elementToSet.Add(element, set2);
+			disjointSets.Remove(set2);
 		    }
 		}
 		else
@@ -141,7 +142,8 @@ namespace aima.core.util
 		    set1.Union(set2);
 		    foreach (E element in set2)
 		    {
-			disjointSets.Remove(elementToSet.Add(element, set1));
+			elementToSet.Add(element, set1);
+			disjointSets.Remove(set1);
 		    }
 		}
 	    }
