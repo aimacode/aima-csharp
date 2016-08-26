@@ -21,7 +21,7 @@ namespace aima.core.logic.common
 	private static readonly int END_OF_INPUT = -1;
 	//
 	private StringReader input;
-	private int[] lookAheadBuffer;
+	public int[] lookAheadBuffer;
 	private int currentPositionInInput;
 
 	/**
