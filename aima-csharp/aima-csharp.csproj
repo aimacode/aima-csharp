@@ -115,8 +115,13 @@
     <Compile Include="logic\fol\domain\FOLDomainListener.cs" />
     <Compile Include="logic\fol\domain\FOLDomainSkolemConstantAddedEvent.cs" />
     <Compile Include="logic\fol\domain\FOLDomainSkolemFunctionAddedEvent.cs" />
+    <Compile Include="logic\fol\kb\data\Chain.cs" />
     <Compile Include="logic\fol\kb\data\Clause.cs" />
+    <Compile Include="logic\fol\kb\data\CNF.cs" />
     <Compile Include="logic\fol\kb\data\Literal.cs" />
+    <Compile Include="logic\fol\kb\data\ReducedLiteral.cs" />
+    <Compile Include="logic\fol\kb\FOLKnowledgeBase.cs" />
+    <Compile Include="logic\fol\kb\FOLKnowledgeBaseFactory.cs" />
     <Compile Include="logic\fol\parsing\AbstractFOLVisitor.cs" />
     <Compile Include="logic\fol\parsing\ast\AtomicSentence.cs" />
     <Compile Include="logic\fol\parsing\ast\ConnectedSentence.cs" />
