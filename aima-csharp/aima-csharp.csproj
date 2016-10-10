@@ -121,6 +121,8 @@
     <Compile Include="logic\fol\inference\defaultimpl\DefaultClauseSimplifier.cs" />
     <Compile Include="logic\fol\inference\defaultimpl\DefaultLightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\inference\LightestClauseHeuristic.cs" />
+    <Compile Include="logic\fol\inference\proof\Proof.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStep.cs" />
     <Compile Include="logic\fol\kb\data\Chain.cs" />
     <Compile Include="logic\fol\kb\data\Clause.cs" />
     <Compile Include="logic\fol\kb\data\CNF.cs" />
