@@ -117,6 +117,9 @@
     <Compile Include="logic\fol\domain\FOLDomainSkolemFunctionAddedEvent.cs" />
     <Compile Include="logic\fol\inference\ClauseFilter.cs" />
     <Compile Include="logic\fol\inference\ClauseSimplifier.cs" />
+    <Compile Include="logic\fol\inference\defaultimpl\DefaultClauseFilter.cs" />
+    <Compile Include="logic\fol\inference\defaultimpl\DefaultClauseSimplifier.cs" />
+    <Compile Include="logic\fol\inference\defaultimpl\DefaultLightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\inference\LightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\kb\data\Chain.cs" />
     <Compile Include="logic\fol\kb\data\Clause.cs" />

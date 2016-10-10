@@ -29,7 +29,7 @@ namespace aima.core.logic.fol.inference.otter
 	 * 
 	 * @param clauses
 	 */
-	void initialSOS(HashSet<Clause> clauses);
+	void initialSOS(List<Clause> clauses);
 
 	void addedClauseToSOS(Clause clause);
 
