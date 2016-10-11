@@ -123,9 +123,12 @@
     <Compile Include="logic\fol\inference\LightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\inference\proof\AbstractProofStep.cs" />
     <Compile Include="logic\fol\inference\proof\Proof.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofFinal.cs" />
     <Compile Include="logic\fol\inference\proof\ProofPrinter.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStep.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepGoal.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepPremise.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepRenaming.cs" />
     <Compile Include="logic\fol\kb\data\Chain.cs" />
     <Compile Include="logic\fol\kb\data\Clause.cs" />
     <Compile Include="logic\fol\kb\data\CNF.cs" />
