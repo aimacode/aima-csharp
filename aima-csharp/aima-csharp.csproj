@@ -115,12 +115,6 @@
     <Compile Include="logic\fol\domain\FOLDomainListener.cs" />
     <Compile Include="logic\fol\domain\FOLDomainSkolemConstantAddedEvent.cs" />
     <Compile Include="logic\fol\domain\FOLDomainSkolemFunctionAddedEvent.cs" />
-    <Compile Include="logic\fol\inference\ClauseFilter.cs" />
-    <Compile Include="logic\fol\inference\ClauseSimplifier.cs" />
-    <Compile Include="logic\fol\inference\defaultimpl\DefaultClauseFilter.cs" />
-    <Compile Include="logic\fol\inference\defaultimpl\DefaultClauseSimplifier.cs" />
-    <Compile Include="logic\fol\inference\defaultimpl\DefaultLightestClauseHeuristic.cs" />
-    <Compile Include="logic\fol\inference\LightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\inference\otter\ClauseFilter.cs" />
     <Compile Include="logic\fol\inference\otter\ClauseSimplifier.cs" />
     <Compile Include="logic\fol\inference\otter\defaultimpl\DefaultClauseFilter.cs" />
@@ -132,6 +126,14 @@
     <Compile Include="logic\fol\inference\proof\ProofFinal.cs" />
     <Compile Include="logic\fol\inference\proof\ProofPrinter.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStep.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepBwChGoal.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepClauseBinaryResolvent.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepClauseClausifySentence.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepClauseDemodulation.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepClauseFactor.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepClauseParamodulation.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepFoChAlreadyAFact.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepFoChAssertFact.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepGoal.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepPremise.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepRenaming.cs" />
