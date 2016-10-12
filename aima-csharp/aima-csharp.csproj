@@ -121,6 +121,12 @@
     <Compile Include="logic\fol\inference\defaultimpl\DefaultClauseSimplifier.cs" />
     <Compile Include="logic\fol\inference\defaultimpl\DefaultLightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\inference\LightestClauseHeuristic.cs" />
+    <Compile Include="logic\fol\inference\otter\ClauseFilter.cs" />
+    <Compile Include="logic\fol\inference\otter\ClauseSimplifier.cs" />
+    <Compile Include="logic\fol\inference\otter\defaultimpl\DefaultClauseFilter.cs" />
+    <Compile Include="logic\fol\inference\otter\defaultimpl\DefaultClauseSimplifier.cs" />
+    <Compile Include="logic\fol\inference\otter\defaultimpl\DefaultLightestClauseHeuristic.cs" />
+    <Compile Include="logic\fol\inference\otter\LightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\inference\proof\AbstractProofStep.cs" />
     <Compile Include="logic\fol\inference\proof\Proof.cs" />
     <Compile Include="logic\fol\inference\proof\ProofFinal.cs" />
