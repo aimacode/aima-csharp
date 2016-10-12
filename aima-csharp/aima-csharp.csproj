@@ -127,6 +127,11 @@
     <Compile Include="logic\fol\inference\proof\ProofPrinter.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStep.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepBwChGoal.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepChainCancellation.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepChainContrapositive.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepChainDropped.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepChainFromClause.cs" />
+    <Compile Include="logic\fol\inference\proof\ProofStepChainReduction.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepClauseBinaryResolvent.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepClauseClausifySentence.cs" />
     <Compile Include="logic\fol\inference\proof\ProofStepClauseDemodulation.cs" />
