@@ -107,6 +107,7 @@
     <Compile Include="logic\common\ParserException.cs" />
     <Compile Include="logic\common\ParserTreeNode.cs" />
     <Compile Include="logic\common\Token.cs" />
+    <Compile Include="logic\fol\CNFConverter.cs" />
     <Compile Include="logic\fol\Connectors.cs" />
     <Compile Include="logic\fol\domain\DomainFactory.cs" />
     <Compile Include="logic\fol\domain\FOLDomain.cs" />
@@ -115,6 +116,8 @@
     <Compile Include="logic\fol\domain\FOLDomainListener.cs" />
     <Compile Include="logic\fol\domain\FOLDomainSkolemConstantAddedEvent.cs" />
     <Compile Include="logic\fol\domain\FOLDomainSkolemFunctionAddedEvent.cs" />
+    <Compile Include="logic\fol\inference\AbstractModulation.cs" />
+    <Compile Include="logic\fol\inference\Demodulation.cs" />
     <Compile Include="logic\fol\inference\InferenceProcedure.cs" />
     <Compile Include="logic\fol\inference\InferenceResult.cs" />
     <Compile Include="logic\fol\inference\InferenceResultPrinter.cs" />
@@ -124,6 +127,7 @@
     <Compile Include="logic\fol\inference\otter\defaultimpl\DefaultClauseSimplifier.cs" />
     <Compile Include="logic\fol\inference\otter\defaultimpl\DefaultLightestClauseHeuristic.cs" />
     <Compile Include="logic\fol\inference\otter\LightestClauseHeuristic.cs" />
+    <Compile Include="logic\fol\inference\Paramodulation.cs" />
     <Compile Include="logic\fol\inference\proof\AbstractProofStep.cs" />
     <Compile Include="logic\fol\inference\proof\Proof.cs" />
     <Compile Include="logic\fol\inference\proof\ProofFinal.cs" />
@@ -170,7 +174,15 @@
     <Compile Include="logic\fol\parsing\FOLLexer.cs" />
     <Compile Include="logic\fol\parsing\FOLParser.cs" />
     <Compile Include="logic\fol\parsing\FOLVisitor.cs" />
+    <Compile Include="logic\fol\PredicateCollector.cs" />
     <Compile Include="logic\fol\Quantifiers.cs" />
+    <Compile Include="logic\fol\StandardizeApart.cs" />
+    <Compile Include="logic\fol\StandardizeApartIndexical.cs" />
+    <Compile Include="logic\fol\StandardizeApartIndexicalFactory.cs" />
+    <Compile Include="logic\fol\StandardizeApartInPlace.cs" />
+    <Compile Include="logic\fol\StandardizeApartResult.cs" />
+    <Compile Include="logic\fol\SubstVisitor.cs" />
+    <Compile Include="logic\fol\SubsumptionElimination.cs" />
     <Compile Include="logic\fol\Unifier.cs" />
     <Compile Include="logic\fol\VariableCollector.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
