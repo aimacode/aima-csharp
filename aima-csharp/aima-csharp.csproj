@@ -118,6 +118,11 @@
     <Compile Include="logic\fol\domain\FOLDomainSkolemFunctionAddedEvent.cs" />
     <Compile Include="logic\fol\inference\AbstractModulation.cs" />
     <Compile Include="logic\fol\inference\Demodulation.cs" />
+    <Compile Include="logic\fol\inference\FOLBCAsk.cs" />
+    <Compile Include="logic\fol\inference\FOLFCAsk.cs" />
+    <Compile Include="logic\fol\inference\FOLModelElimination.cs" />
+    <Compile Include="logic\fol\inference\FOLOTTERLikeTheoremProver.cs" />
+    <Compile Include="logic\fol\inference\FOLTFMResolution.cs" />
     <Compile Include="logic\fol\inference\InferenceProcedure.cs" />
     <Compile Include="logic\fol\inference\InferenceResult.cs" />
     <Compile Include="logic\fol\inference\InferenceResultPrinter.cs" />
