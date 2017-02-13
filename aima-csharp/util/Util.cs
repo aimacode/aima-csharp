@@ -44,6 +44,26 @@ namespace aima.core.util
             return newList;
         }
 
+        /**
+	    * Create a set for the provided values.
+	    * @param values
+	    *        the sets initial values.
+	    * @return a Set of the provided values.
+	    */
+    
+        public static HashSet<T> createSet<T>(params T[] values)
+        {
+            HashSet<T> set = new HashSet<T>();
+
+            foreach(T t in values)
+            {
+                set.Add(t);
+            }
+
+            return set;
+        }
+
+
         public static bool randombool()
         {
             int trueOrFalse = r.Next(2);
