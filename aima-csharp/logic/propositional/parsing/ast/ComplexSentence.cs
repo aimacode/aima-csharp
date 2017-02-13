@@ -49,8 +49,8 @@ namespace aima.core.logic.propositional.parsing.ast
 	    * @param sentenceL
 	    * 			the left hand sentence.
 	    * @param binaryConnective
-	    * 			the binary connective.0
-12	    * @param sentenceR
+	    * 			the binary connective.
+	    * @param sentenceR
 	    *  		the right hand sentence.
 	    */
         public ComplexSentence(Sentence sentenceL, Connective binaryConnective, Sentence sentenceR) : this(binaryConnective, sentenceL, sentenceR)

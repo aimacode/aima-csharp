@@ -12,6 +12,8 @@ namespace aima.core.logic.propositional.parsing.ast
     * Note: this class hierarchy defines the abstract syntax representation used
     * for representing propositional logic.
     * 
+    * @author Ciaran O'Reilly
+    * @author Ravi Mohan
     * @author Avinash Agarwal
     * 
     */
@@ -29,10 +31,10 @@ namespace aima.core.logic.propositional.parsing.ast
         }
 
         /**
-	 * 
-	 * @return the number of simpler sentences contained in this sentence. Will
-	 *         only be > 0 if a Complex Sentence.
-	 */
+	     * 
+	     * @return the number of simpler sentences contained in this sentence. Will
+	     *         only be > 0 if a Complex Sentence.
+	     */
         public virtual int getNumberSimplerSentences()
         {
             return 0;
@@ -256,10 +258,9 @@ namespace aima.core.logic.propositional.parsing.ast
             }
             return new ComplexSentence(Util.first(conjuncts), Connective.AND, newConjunction(Util.rest(conjuncts)));
         }
-
-        //
+        
         // PROTECTED
-        //
+
         protected bool hasConnective(Connective connective)
         {
             // Note: can use '==' as Connective is an enum.

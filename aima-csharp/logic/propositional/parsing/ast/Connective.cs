@@ -22,6 +22,7 @@ namespace aima.core.logic.propositional.parsing.ast
     * OPERATOR PRECEDENCE: ~, &, |, =>, <=>
     * </pre>
     * 
+    * @author Ciaran O'Reilly
     * @author Avinash Agarwal
     * 
     */

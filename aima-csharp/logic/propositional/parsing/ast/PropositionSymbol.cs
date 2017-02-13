@@ -12,14 +12,14 @@ namespace aima.core.logic.propositional.parsing.ast
     * proposition.< br >
     * < br >
     * < b > Note </ b >: While the book states:< br >
-    *'We use symbols that start with an upper case letter and may contain other
+    * 'We use symbols that start with an upper case letter and may contain other
     * letters or subscripts'. In this implementation we allow any legal java
     * identifier to stand in for a proposition symbol.
     *
-    *@author Ciaran O'Reilly
+    * @author Ciaran O'Reilly
     * @author Ravi Mohan
     *
-    *@see SourceVersion#isIdentifier(CharSequence)
+    * @see SourceVersion#isIdentifier(CharSequence)
     */
 
     public class PropositionSymbol : AtomicSentence
