@@ -35,7 +35,12 @@ namespace aima.core.logic.fol.parsing.ast
 	    return false;
 	}
 
-	public List<Term> getArgs()
+        List<FOLNode> FOLNode.getArgs()
+        {
+            return null;
+        }
+
+        public List<Term> getArgs()
 	{
 	    // Is not Compound, therefore should
 	    // return null for its arguments
@@ -47,7 +52,12 @@ namespace aima.core.logic.fol.parsing.ast
 	    return v.visitConstant(this, arg);
 	}
 
-	public Constant copy()
+        FOLNode FOLNode.copy()
+        {
+            return copy();
+        }
+
+        public Term copy()
 	{
 	    return new Constant(value);
 	}

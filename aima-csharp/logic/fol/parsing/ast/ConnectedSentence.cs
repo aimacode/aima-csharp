@@ -65,9 +65,14 @@ namespace aima.core.logic.fol.parsing.ast
 	    return v.visitConnectedSentence(this, arg);
 	}
 
-	public ConnectedSentence copy()
+        public FOLNode copy()
+        {
+            return null;
+        }
+
+        public Sentence copySentence()
 	{
-	    return new ConnectedSentence(connector, first.copy(), second.copy());
+	    return new ConnectedSentence(connector, first.copySentence(), second.copySentence());
 	}
 
 	// END-Sentence

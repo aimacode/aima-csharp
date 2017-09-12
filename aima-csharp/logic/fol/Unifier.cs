@@ -51,8 +51,9 @@ namespace aima.core.logic.fol
     public class Unifier
     {
 	private static SubstVisitor _substVisitor = new SubstVisitor();
+        private VariableCollector _variableCollector;
 
-	public Unifier()
+        public Unifier()
 	{
 
 	}

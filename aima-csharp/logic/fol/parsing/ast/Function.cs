@@ -46,7 +46,12 @@ namespace aima.core.logic.fol.parsing.ast
 	    return true;
 	}
 
-	public List<Term> getArgs()
+        List<FOLNode> FOLNode.getArgs()
+        {
+            return null;
+        }
+
+        public List<Term> getArgs()
 	{
 	    return getTerms();
 	}
@@ -56,7 +61,12 @@ namespace aima.core.logic.fol.parsing.ast
 	    return v.visitFunction(this, arg);
 	}
 
-	public Function copy()
+        FOLNode FOLNode.copy()
+        {
+            return copy();
+        }
+
+        public Term copy()
 	{
 	    List<Term> copyTerms = new List<Term>();
 	    foreach (Term t in terms)

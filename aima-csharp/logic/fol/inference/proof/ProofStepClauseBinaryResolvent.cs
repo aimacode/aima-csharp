@@ -20,8 +20,13 @@ namespace aima.core.logic.fol.inference.proof
 	private Clause parent1, parent2 = null;
 	private Dictionary<Variable, Term> subst = new Dictionary<Variable, Term>();
 	private Dictionary<Variable, Term> renameSubst = new Dictionary<Variable, Term>();
+        private Clause c;
+        private Clause clause;
+        private Clause othC;
+        private Dictionary<Variable, Term> copyRBindings;
+        private Dictionary<Variable, Term> renameSubstitituon;
 
-	public ProofStepClauseBinaryResolvent(Clause resolvent, Literal pl,
+        public ProofStepClauseBinaryResolvent(Clause resolvent, Literal pl,
 			Literal nl, Clause parent1, Clause parent2,
 			Dictionary<Variable, Term> subst, Dictionary<Variable, Term> renameSubst)
 	{
@@ -45,9 +50,18 @@ namespace aima.core.logic.fol.inference.proof
 	    this.predecessors.Add(parent2.getProofStep());
 	}
 
-	// START-ProofStep
+        public ProofStepClauseBinaryResolvent(Clause c, Clause clause, Clause othC, Dictionary<Variable, Term> copyRBindings, Dictionary<Variable, Term> renameSubstitituon)
+        {
+            this.c = c;
+            this.clause = clause;
+            this.othC = othC;
+            this.copyRBindings = copyRBindings;
+            this.renameSubstitituon = renameSubstitituon;
+        }
 
-	public override List<ProofStep> getPredecessorSteps()
+        // START-ProofStep
+
+        public override List<ProofStep> getPredecessorSteps()
 	{
 	    return new ReadOnlyCollection<ProofStep>(predecessors).ToList<ProofStep>();
 	}

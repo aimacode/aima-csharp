@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using aima.core.logic.fol.inference.otter;
 using aima.core.logic.fol.inference.otter.defaultimpl;
@@ -294,7 +295,7 @@ namespace aima.core.logic.fol.inference
 	    }
 
 	    // * return the resulting clauses after applying filter
-	    return getClauseFilter().filter(resultingClauses);
+	    return getClauseFilter().filter(new HashSet<Clause>(resultingClauses)).ToList();
 	}
 
 	// procedure PROCESS(clauses, sos)
@@ -647,7 +648,7 @@ namespace aima.core.logic.fol.inference
 						    .getSymbolicName()))
 		    {
 			Dictionary<Variable, Term> answerBindings = new Dictionary<Variable, Term>();
-			List<FOLNode> answerTerms = aClause.getPositiveLiterals()[
+			List<Term> answerTerms = aClause.getPositiveLiterals()[
 				0].getAtomicSentence().getArgs();
 			int idx = 0;
 			foreach (Variable v in answerLiteralVariables)

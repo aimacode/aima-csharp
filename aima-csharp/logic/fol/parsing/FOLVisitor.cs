@@ -10,21 +10,21 @@ namespace aima.core.logic.fol.parsing
      */
     public interface FOLVisitor
     {
-	public Object visitPredicate(Predicate p, Object arg);
+	Object visitPredicate(Predicate p, Object arg);
 
-	public Object visitTermEquality(TermEquality equality, Object arg);
+	Object visitTermEquality(TermEquality equality, Object arg);
 
-	public Object visitVariable(Variable variable, Object arg);
+	Object visitVariable(Variable variable, Object arg);
 
-	public Object visitConstant(Constant constant, Object arg);
+	Object visitConstant(Constant constant, Object arg);
 
-	public Object visitFunction(Function function, Object arg);
+	Object visitFunction(Function function, Object arg);
 
-	public Object visitNotSentence(NotSentence sentence, Object arg);
+	Object visitNotSentence(NotSentence sentence, Object arg);
 
-	public Object visitConnectedSentence(ConnectedSentence sentence, Object arg);
+	Object visitConnectedSentence(ConnectedSentence sentence, Object arg);
 
-	public Object visitQuantifiedSentence(QuantifiedSentence sentence,
+	Object visitQuantifiedSentence(QuantifiedSentence sentence,
 			Object arg);
     }
 }

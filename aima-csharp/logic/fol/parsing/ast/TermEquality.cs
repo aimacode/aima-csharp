@@ -53,7 +53,17 @@ namespace aima.core.logic.fol.parsing.ast
 	    return true;
 	}
 
-	public List<FOLNode> getArgs()
+        List<Term> AtomicSentence.getArgs()
+        {
+            return null;
+        }
+
+        AtomicSentence AtomicSentence.copy()
+        {
+            return null;
+        }
+
+        public List<FOLNode> getArgs()
 	{
 	    return new ReadOnlyCollection<Term>(terms).ToList<FOLNode>();
 	}
@@ -68,7 +78,12 @@ namespace aima.core.logic.fol.parsing.ast
 	    return new TermEquality((Term)term1.copy(), (Term)term2.copy());
 	}
 
-	// END-AtomicSentence
+        public Sentence copySentence()
+        {
+            return null;
+        }
+
+        // END-AtomicSentence
 	
 	public override bool Equals(Object o)
 	{
