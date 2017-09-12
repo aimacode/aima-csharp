@@ -20,7 +20,7 @@ namespace aima.core.search.framework
 	 */    
         public static List<Action> getSequenceOfActions(Node node)
         {
-            List<Node> nodes = node.getPathFromRoot();
+            List<Node> nodes = node.GetPathFromRoot();
             List<Action> actions = new List<Action>();
 
             if(nodes.Count == 1)
@@ -36,7 +36,7 @@ namespace aima.core.search.framework
                 for (int i = 1; i < nodes.Count; i++)
                 {
                     Node node_temp = nodes[i];
-                    actions.Add(node_temp.getAction());
+                    actions.Add(node_temp.Action);
                 }
             }
             return actions;
@@ -73,12 +73,12 @@ namespace aima.core.search.framework
         {
             bool isGoal = false;
             GoalTest gt = p.getGoalTest();
-            if (gt.isGoalState(n.getState()))
+            if (gt.isGoalState(n.State))
             {
                 if (gt is SolutionChecker)
                 {
                     isGoal = ((SolutionChecker)gt).isAcceptableSolution(
-                            getSequenceOfActions(n), n.getState());
+                            getSequenceOfActions(n), n.State);
                 }
                 else
                 {

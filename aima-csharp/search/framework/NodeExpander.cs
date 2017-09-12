@@ -28,7 +28,7 @@ namespace aima.core.search.framework
 	 */
          public Node createNode(System.Object state, Node parent, Action action, double stepCost)
         {
-            return new Node(state, parent, action, parent.getPathCost() + stepCost);
+            return new Node(state, parent, action, parent.PathCost + stepCost);
         }
 
         /**
@@ -51,11 +51,11 @@ namespace aima.core.search.framework
             ResultFunction resultFunction = problem.getResultFunction();
             StepCostFunction stepCostFunction = problem.getStepCostFunction();
 
-            foreach (Action action in actionsFunction.actions(node.getState()))
+            foreach (Action action in actionsFunction.actions(node.State))
             {
-                System.Object successorState = resultFunction.result(node.getState(), action);
+                System.Object successorState = resultFunction.result(node.State, action);
 
-                double stepCost = stepCostFunction.c(node.getState(), action, successorState);
+                double stepCost = stepCostFunction.c(node.State, action, successorState);
                 successors.Add(createNode(successorState, node, action, stepCost));
             }
 
