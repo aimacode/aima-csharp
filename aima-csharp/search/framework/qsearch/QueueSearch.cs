@@ -163,7 +163,7 @@ namespace aima.core.search.framework.qsearch
 
         private List<Action> getSolution(Node node)
         {
-            metrics.set(METRIC_PATH_COST, node.getPathCost());
+            metrics.set(METRIC_PATH_COST, node.PathCost);
             return SearchUtils.getSequenceOfActions(node);
         }
     }

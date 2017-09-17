@@ -404,7 +404,7 @@ namespace aima.core.logic.fol.inference
 						    .getSymbolicName()))
 		    {
 			Dictionary<Variable, Term> answerBindings = new Dictionary<Variable, Term>();
-			List<FOLNode> answerTerms = nearParent.getHead()
+			List<Term> answerTerms = nearParent.getHead()
 				.getAtomicSentence().getArgs();
 			int idx = 0;
 			foreach (Variable v in answerLiteralVariables)

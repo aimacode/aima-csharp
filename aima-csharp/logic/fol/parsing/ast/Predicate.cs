@@ -45,7 +45,17 @@ namespace aima.core.logic.fol.parsing.ast
 	    return true;
 	}
 
-	public List<Term> getArgs()
+        List<FOLNode> FOLNode.getArgs()
+        {
+            return null;
+        }
+
+        AtomicSentence AtomicSentence.copy()
+        {
+            return null;
+        }
+
+        public List<Term> getArgs()
 	{
 	    return getTerms();
 	}
@@ -55,7 +65,7 @@ namespace aima.core.logic.fol.parsing.ast
 	    return v.visitPredicate(this, arg);
 	}
 
-	public Predicate copy()
+	public FOLNode copy()
 	{
 	    List<Term> copyTerms = new List<Term>();
 	    foreach (Term t in terms)
@@ -65,7 +75,12 @@ namespace aima.core.logic.fol.parsing.ast
 	    return new Predicate(predicateName, copyTerms);
 	}
 
-	// END-AtomicSentence
+        public Sentence copySentence()
+        {
+            return null;
+        }
+
+        // END-AtomicSentence
 
 	public override bool Equals(Object o)
 	{

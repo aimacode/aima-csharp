@@ -25,7 +25,7 @@ namespace aima.core.search.framework
          */
         public double g(Node n)
         {
-            return n.getPathCost();
+            return n.PathCost;
         }
     }
 }

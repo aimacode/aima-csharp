@@ -546,7 +546,7 @@ namespace aima.core.logic.fol.kb.data
 			    _standardizeApart.standardizeApart(posLits, negLits,
 				    _saIndexical);
 			    Clause c = new Clause(posLits, negLits);
-			    c.setProofStep(new ProofStepClauseFactor(c, this));
+			    c.setProofStep(new ProofStepClauseFactor(c, this, null, null, null, null));
 			    if (isImmutable())
 			    {
 				c.setImmutable();
@@ -672,7 +672,7 @@ namespace aima.core.logic.fol.kb.data
 		// Track the terms for this clause
 		foreach (Literal tl in thisToTry[literalName])
 		{
-		    List<FOLNode> folNodes = tl.getAtomicSentence().getArgs();
+		    List<Term> folNodes = tl.getAtomicSentence().getArgs();
 		    foreach (FOLNode n in folNodes)
 		    {
 			thisTerms.Add((Term)n);
@@ -831,7 +831,7 @@ namespace aima.core.logic.fol.kb.data
 	    return rVal;
 	}
 
-	private int compareArgs(List<FOLNode> args1, List<FOLNode> args2)
+	private int compareArgs(List<Term> args1, List<Term> args2)
 	{
 	    int rVal = 0;
 
@@ -869,8 +869,8 @@ namespace aima.core.logic.fol.kb.data
 		    // remaining arguments
 		    if (0 == rVal)
 		    {
-			rVal = compareArgs(args1.Skip(1).ToList<FOLNode>(), args2
-				.Skip(1).ToList<FOLNode>());
+			rVal = compareArgs(args1.Skip(1).ToList<Term>(), args2
+				.Skip(1).ToList<Term>());
 		    }
 		}
 		else

@@ -127,7 +127,7 @@ namespace aima.core.logic.fol.inference
 	    {
 		if (null != tracer)
 		{
-		    tracer.stepStartWhile(clauses, clauses.Count, newClauses
+		    tracer.stepStartWhile(new HashSet<Clause>(clauses), clauses.Count, newClauses
 			    .Count);
 		}
 
@@ -167,7 +167,7 @@ namespace aima.core.logic.fol.inference
 
 			    if (null != tracer)
 			    {
-				tracer.stepResolved(cI, cJ, toAdd);
+				tracer.stepResolved(cI, cJ, new HashSet<Clause>(toAdd));
 			    }
 
 			    ansHandler.checkForPossibleAnswers(toAdd);
@@ -209,7 +209,7 @@ namespace aima.core.logic.fol.inference
 
 	    if (null != tracer)
 	    {
-		tracer.stepFinished(clauses, ansHandler);
+		tracer.stepFinished(new HashSet<Clause>(clauses), ansHandler);
 	    }
 
 	    return ansHandler;
@@ -312,7 +312,7 @@ namespace aima.core.logic.fol.inference
 							.getSymbolicName()))
 			{
 			    Dictionary<Variable, Term> answerBindings = new Dictionary<Variable, Term>();
-			    List<FOLNode> answerTerms = aClause.getPositiveLiterals()
+			    List<Term> answerTerms = aClause.getPositiveLiterals()
 				    [0].getAtomicSentence().getArgs();
 			    int idx = 0;
 			    foreach (Variable v in answerLiteralVariables)
@@ -321,7 +321,7 @@ namespace aima.core.logic.fol.inference
 				idx++;
 			    }
 			    bool addNewAnswer = true;
-			    foreach (Proof.Proof p in proofs)
+			    foreach (Proof p in proofs)
 			    {
 				if (p.getAnswerBindings().Equals(answerBindings))
 				{

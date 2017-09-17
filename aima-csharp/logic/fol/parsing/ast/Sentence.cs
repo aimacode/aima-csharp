@@ -8,6 +8,6 @@ namespace aima.core.logic.fol.parsing.ast
      */
     public interface Sentence : FOLNode
     {
-	Sentence copy();
+	Sentence copySentence();
     }
 }

@@ -67,17 +67,22 @@ namespace aima.core.logic.fol.parsing.ast
 	    return v.visitQuantifiedSentence(this, arg);
 	}
 
-	public QuantifiedSentence copy()
+	public FOLNode copy()
 	{
 	    List<Variable> copyVars = new List<Variable>();
 	    foreach (Variable v in variables)
 	    {
-		copyVars.Add(v.copy());
+		copyVars.Add((Variable)v.copy());
 	    }
-	    return new QuantifiedSentence(quantifier, copyVars, quantified.copy());
+	    return new QuantifiedSentence(quantifier, copyVars, quantified.copySentence());
 	}
 
-	// END-Sentence
+        public Sentence copySentence()
+        {
+            return null;
+        }
+
+        // END-Sentence
 
 	public override bool Equals(Object o)
 	{

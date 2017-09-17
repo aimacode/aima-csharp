@@ -1,157 +1,115 @@
+using System;
 using System.Collections.Generic;
-using aima.core.agent;
+using System.Linq;
+using Action = aima.core.agent.Action;
 
 namespace aima.core.search.framework
 {
-    /**
-     * Artificial Intelligence A Modern Approach (3rd Edition): Figure 3.10, page
-     * 79.<br>
-     * 
-     * Figure 3.10 Nodes are the data structures from which the search tree is
-     * constructed. Each has a parent, a state, and various bookkeeping fields.
-     * Arrows point from child to parent.<br>
-     * <br>
-     * Search algorithms require a data structure to keep track of the search tree
-     * that is being constructed. For each node n of the tree, we have a structure
-     * that contains four components:
-     * <ul>
-     * <li>n.STATE: the state in the state space to which the node corresponds;</li>
-     * <li>n.PARENT: the node in the search tree that generated this node;</li>
-     * <li>n.ACTION: the action that was applied to the parent to generate the node;
-     * </li>
-     * <li>n.PATH-COST: the cost, traditionally denoted by g(n), of the path from
-     * the initial state to the node, as indicated by the parent pointers.</li>
-     * </ul>
-     * 
-     * @author Ravi Mohan
-     * @author Ciaran O'Reilly
-     * @author Mike Stampone
-     */
-     public class Node
+    /// <summary>
+    ///     Represents a node in a search tree which corresponds to a state in a state space.
+    /// </summary>
+    /// <remarks>
+    ///     Artificial Intelligence A Modern Approach (3rd Edition): Figure 3.10, page 79.
+    ///     - Nodes are the data structures from which the search tree is constructed.
+    ///     - Each node has a parent, a state, and various bookkeeping fields.
+    ///     - Arrows point from child to parent.
+    ///     <para />
+    ///     @author Ravi Mohan
+    ///     @author Ciaran O'Reilly
+    ///     @author Mike Stampone
+    /// </remarks>
+    public class Node
     {
-        // n.STATE: the state in the state space to which the node corresponds;
-        private System.Object state;
+        /// <summary>
+        ///     The action that was applied to the parent to generate this node.
+        /// </summary>
+        public Action Action { get; }
 
-        // n.PARENT: the node in the search tree that generated this node;
-        private Node parent;
+        /// <summary>
+        ///     The node in the search tree that generated this node.
+        /// </summary>
+        public Node Parent { get; }
 
-        // n.ACTION: the action that was applied to the parent to generate the node;
-        private Action action;
+        /// <summary>
+        ///     The cumulative cost, traditionally denoted by g(n), of the path from the initial state to this node (as indicated by the parent pointers).
+        /// </summary>
+        public double PathCost { get; }
 
-        // n.PATH-COST: the cost, traditionally denoted by g(n), of the path from
-        // the initial state to the node, as indicated by the parent pointers.
-        private double pathCost;
+        /// <summary>
+        ///     The state in the state space to which this node corresponds.
+        /// </summary>
+        public object State { get; }
 
-        /**
-	 * Constructs a node with the specified state.
-	 * 
-	 * @param state
-	 *            the state in the state space to which the node corresponds.
-         */
-        public Node(System.Object state)
+        /// <summary>
+        ///     Creates a new instance of <see cref="Node" /> with the specified state.
+        /// </summary>
+        public Node(object state)
         {
-            this.state = state;
-            this.pathCost = 0.0;
+            if (state == null)
+            {
+                throw new ArgumentNullException(nameof(state));
+            }
+
+            State = state;
+            PathCost = 0.0;
         }
 
-        /**
-	 * Constructs a node with the specified state, parent, action, and path
-	 * cost.
-	 * 
-	 * @param state
-	 *            the state in the state space to which the node corresponds.
-	 * @param parent
-    	 *            the node in the search tree that generated the node.
-    	 * @param action
-    	 *            the action that was applied to the parent to generate the
-    	 *            node.
-    	 * @param pathCost
-    	 *            full pathCost from the root node to here, typically
-    	 *            the root's path costs plus the step costs for executing
-    	 *            the the specified action.
-    	 */
-        public Node(System.Object state, Node parent, Action action, double stepCost) : this(state) 
-        {            
-            this.parent = parent;
-            this.action = action;
-            this.pathCost = parent.pathCost + stepCost;
+        /// <summary>
+        ///     Creates a new instance of <see cref="Node" /> with the specified state, parent, action, and step cost.
+        ///     <para>
+        ///         The step cost is the cost from the parent node to this node.
+        ///     </para>
+        /// </summary>
+        public Node(object state, Node parent, Action action, double stepCost) : this(state)
+        {
+            if (parent == null)
+            {
+                throw new ArgumentNullException(nameof(parent));
+            }
+            if (action == null)
+            {
+                throw new ArgumentNullException(nameof(action));
+            }
+
+            Parent = parent;
+            Action = action;
+            PathCost = parent.PathCost + stepCost;
         }
 
-        /**
-	 * Returns the state in the state space to which the node corresponds.
-	 * 
-	 * @return the state in the state space to which the node corresponds.
-	 */
-        public System.Object getState()
+        /// <summary>
+        ///     Returns the path from the root node to this node.
+        /// </summary>
+        public List<Node> GetPathFromRoot()
         {
-            return state;
-        }
+            var path = new List<Node>();
+            var current = this;
 
-        /**
-    	 * Returns this node's parent node, from which this node was generated.
-    	 * 
-    	 * @return the node's parenet node, from which this node was generated.
-    	 */
-        public Node getParent()
-        {
-            return parent;
-        }
-
-        /**
-	 * Returns the action that was applied to the parent to generate the node.
-	 * 
-    	 * @return the action that was applied to the parent to generate the node.
-    	 */
-        public Action getAction()
-        {
-            return action;
-        }
-
-        /**
-	 * Returns the cost of the path from the initial state to this node as
-	 * indicated by the parent pointers.
-    	 * 
-	 * @return the cost of the path from the initial state to this node as
-    	 *         indicated by the parent pointers.
-    	 */
-        public double getPathCost()
-        {
-            return pathCost;
-        }
-
-        /**
-	 * Returns <code>true</code> if the node has no parent.
-	 * 
-	 * @return <code>true</code> if the node has no parent.
-	 */
-        public bool isRootNode()
-        {
-            return parent == null;
-        }
-
-        /**
-	 * Returns the path from the root node to this node.
-	 * 
-    	 * @return the path from the root node to this node.
-    	 */
-        public List<Node> getPathFromRoot()
-        {
-            List<Node> path = new List<Node>();
-            Node current = this;
-            while (!current.isRootNode())
+            while (true)
             {
                 path.Insert(0, current);
-                current = current.getParent();
+
+                if (current.IsRoot())
+                {
+                    break;
+                }
+
+                current = current.Parent;
             }
-            // ensure the root node is added
-            path.Insert(0, current);
+
             return path;
         }
 
-        public override System.String ToString()
+        /// <summary>
+        ///     Returns <see langword="true" /> if this node has no parent node; otherwise, <see langword="false" />.
+        /// </summary>
+        public bool IsRoot()
         {
-            return "[parent=" + parent + ", action=" + action + ", state="
-                    + getState() + ", pathCost=" + pathCost + "]";
+            return Parent == null;
+        }
+
+        public override string ToString()
+        {
+            return string.Join(" <-- ", GetPathFromRoot().Select(x => $"[action={Action}, state={State}, pathCost={PathCost}]"));
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using aima.core.logic.fol;
 using aima.core.logic.fol.parsing;
 using aima.core.logic.fol.inference.proof;
+using System.Collections.ObjectModel;
 
 namespace aima.core.logic.fol.parsing.ast
 {
@@ -57,7 +58,12 @@ namespace aima.core.logic.fol.parsing.ast
 	    return new NotSentence((Sentence)negated.copy());
 	}
 
-	// END-Sentence
+        public Sentence copySentence()
+        {
+            return null;
+        }
+
+        // END-Sentence
 
 	public override bool Equals(Object o)
 	{

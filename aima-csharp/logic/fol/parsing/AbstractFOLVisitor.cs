@@ -16,7 +16,7 @@ namespace aima.core.logic.fol.parsing
 
 	protected Sentence recreate(Object ast)
 	{
-	    return ((Sentence)ast).copy();
+	    return ((Sentence)ast).copySentence();
 	}
 
 	public virtual Object visitVariable(Variable variable, Object arg)
