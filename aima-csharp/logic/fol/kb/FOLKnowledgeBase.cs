@@ -147,8 +147,8 @@ namespace aima.core.logic.fol.kb
 		Dictionary<Variable, Term> em = new Dictionary<Variable, Term>();
 		foreach (Variable rev in saResult.getReverseSubstitution().Keys)
 		{
-		    em.Add((Variable)saResult.getReverseSubstitution()[rev],
-			    im[rev]);
+			Term toInsert = im.ContainsKey(rev) ? im[rev] : null;
+		    em.Add((Variable)saResult.getReverseSubstitution()[rev], toInsert);
 		}
 		p.replaceAnswerBindings(em);
 	    }

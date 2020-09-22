@@ -33,7 +33,7 @@ namespace aima.core.logic.common
 	 */
 	public void setInput(String inputString)
 	{
-	    this.input = new StringReader(inputString);
+		setInput(new StringReader(inputString));
 	}
 
 	/**

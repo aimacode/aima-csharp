@@ -48,31 +48,38 @@ namespace aima.core.logic.fol.inference.proof
 	    return new ReadOnlyCollection<ProofStep>(predecessors).ToList<ProofStep>();
 	}
 
-	public override String getProof()
-	{
-	    StringBuilder sb = new StringBuilder();
-	    List<Literal> nLits = toProve.getNegativeLiterals();
-	    for (int i = 0; i < toProve.getNumberNegativeLiterals(); i++)
-	    {
-		sb.Append(nLits[i].getAtomicSentence());
-		if (i != (toProve.getNumberNegativeLiterals() - 1))
+		public override String getProof()
 		{
-		    sb.Append(" AND ");
+			StringBuilder sb = new StringBuilder();
+			List<Literal> nLits = toProve.getNegativeLiterals();
+			for (int i = 0; i < toProve.getNumberNegativeLiterals(); i++)
+			{
+				sb.Append(nLits[i].getAtomicSentence());
+				if (i != (toProve.getNumberNegativeLiterals() - 1))
+				{
+					sb.Append(" AND ");
+				}
+			}
+			if (toProve.getNumberNegativeLiterals() > 0)
+			{
+				sb.Append(" => ");
+			}
+			var pl = toProve.getPositiveLiterals()[0];
+			sb.Append(pl.ToString());
+			return sb.ToString();
 		}
-	    }
-	    if (toProve.getNumberNegativeLiterals() > 0)
-	    {
-		sb.Append(" => ");
-	    }
-	    sb.Append(toProve.getPositiveLiterals()[0]);
-	    return sb.ToString();
-	}
 
-	public override String getJustification()
-	{
-	    return "Current Goal " + currentGoal.getAtomicSentence().ToString()
-		    + ", " + bindings;
-	}
+		public override String getJustification()
+		{
+			var sb = new StringBuilder();
+			sb.Append("Current Goal " + currentGoal.getAtomicSentence().ToString() + ", ");
+			foreach (var kv in bindings)
+			{
+				const string V = "{0}->{1},";
+				sb.AppendFormat(V, kv.Key, kv.Value);
+			}
+			return sb.ToString();
+		}
 
 	// END-ProofStep
     }
