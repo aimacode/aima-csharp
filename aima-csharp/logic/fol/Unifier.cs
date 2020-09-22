@@ -154,14 +154,6 @@ namespace aima.core.logic.fol
 			{
 				return null;
 			}
-			else if (x == null && y == null)
-			{
-				return theta;
-			}
-			else if (x != null && y == null || x == null && y != null)
-			{
-				return null;
-			}
 			else if (x.Count != y.Count)
 			{
 				return null;
