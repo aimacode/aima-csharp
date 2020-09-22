@@ -57,42 +57,41 @@ namespace aima.core.logic.fol
 			    renameSubstitution, reverseSubstitution);
 	}
 
-	public Clause standardizeApart(Clause clause,
-			StandardizeApartIndexical standardizeApartIndexical)
-	{
-
-	    List<Variable> toRename = variableCollector.collectAllVariables(clause);
-	    Dictionary<Variable, Term> renameSubstitution = new Dictionary<Variable, Term>();
-
-	    foreach (Variable var in toRename)
-	    {
-		Variable v = null;
-		do
+		public Clause standardizeApart(Clause clause,
+				StandardizeApartIndexical standardizeApartIndexical)
 		{
-		    v = new Variable(standardizeApartIndexical.getPrefix()
-				    + standardizeApartIndexical.getNextIndex());
-		    // Ensure the new variable name is not already
-		    // accidentally used in the sentence
-		} while (toRename.Contains(v));
 
-		renameSubstitution.Add(var, v);
-	    }
+			List<Variable> toRename = variableCollector.collectAllVariables(clause);
+			Dictionary<Variable, Term> renameSubstitution = new Dictionary<Variable, Term>();
 
-	    if (renameSubstitution.Count > 0)
-	    {
-		List<Literal> literals = new List<Literal>();
+			foreach (Variable var in toRename)
+			{
+				Variable v;
+				do
+				{
+					v = new Variable(standardizeApartIndexical.getPrefix()
+							+ standardizeApartIndexical.getNextIndex());
+					// Ensure the new variable name is not already
+					// accidentally used in the sentence
+				} while (toRename.Contains(v));
+				renameSubstitution[var] = v;
+			}
 
-		foreach (Literal l in clause.getLiterals())
-		{
-		    literals.Add(substVisitor.subst(renameSubstitution, l));
+			if (renameSubstitution.Count > 0)
+			{
+				List<Literal> literals = new List<Literal>();
+
+				foreach (Literal l in clause.getLiterals())
+				{
+					literals.Add(substVisitor.subst(renameSubstitution, l));
+				}
+				Clause renamed = new Clause(literals);
+				renamed.setProofStep(new ProofStepRenaming(renamed, clause
+						.getProofStep()));
+				return renamed;
+			}
+			return clause;
 		}
-		Clause renamed = new Clause(literals);
-		renamed.setProofStep(new ProofStepRenaming(renamed, clause
-				.getProofStep()));
-		return renamed;
-	    }
-	    return clause;
-	}
 
 	public Chain standardizeApart(Chain chain,
 			StandardizeApartIndexical standardizeApartIndexical)

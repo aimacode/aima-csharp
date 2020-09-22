@@ -173,10 +173,11 @@ namespace aima.core.logic.fol.inference
 	private Dictionary<Variable, Term> cascadeSubstitutions(FOLKnowledgeBase KB,
 		Dictionary<Variable, Term> theta)
 	{
-	    foreach (Variable v in theta.Keys)
+			var keys = theta.Keys.ToList();
+
+			foreach (Variable v in keys)
 	    {
-		Term t = theta[v];
-		theta.Add(v, KB.subst(theta, t));
+		      theta[v] =  KB.subst(theta, theta[v]);
 	    }
 
 	    return theta;
