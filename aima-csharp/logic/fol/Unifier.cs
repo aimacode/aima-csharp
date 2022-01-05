@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using aima.core.logic.fol.parsing.ast;
 
 namespace aima.core.logic.fol

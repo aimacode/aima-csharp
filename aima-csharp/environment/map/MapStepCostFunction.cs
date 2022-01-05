@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.search.framework.problem;
 
@@ -27,7 +26,7 @@ namespace aima.core.environment.map
 
 	//
 	// START-StepCostFunction
-	public double c(object fromCurrentState, Action action, object toNextState)
+	public double c(object fromCurrentState, agent.Action action, object toNextState)
 	{
 
 	    string fromLoc = fromCurrentState.ToString();

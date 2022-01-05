@@ -42,12 +42,12 @@ namespace aima.core.logic.propositional.agent
 	}
 
 	// function KB-AGENT(percept) returns an action
-	public override Action execute(Percept percept)
+	public override core.agent.Action execute(Percept percept)
 	{
 	    // TELL(KB, MAKE-PERCEPT-SENTENCE(percept, t))
 	    KB.tell(makePerceptSentence(percept, t));
 	    // action &lt;- ASK(KB, MAKE-ACTION-QUERY(t))
-	    Action action = ask(KB, makeActionQuery(t));
+	    core.agent.Action action = ask(KB, makeActionQuery(t));
 
 	    // TELL(KB, MAKE-ACTION-SENTENCE(action, t))
 	    KB.tell(makeActionSentence(action, t));
@@ -92,7 +92,7 @@ namespace aima.core.logic.propositional.agent
 	 * @return a sentence asserting that the chosen action was executed.
 	 */
 	// MAKE-ACTION-SENTENCE(action, t)
-	public abstract Sentence makeActionSentence(Action action, int t);
+	public abstract Sentence makeActionSentence(core.agent.Action action, int t);
 
 	/**
 	 * A wrapper around the KB's ask() method which translates the action (in the form of
@@ -106,6 +106,6 @@ namespace aima.core.logic.propositional.agent
 	 * @return the Action to be performed in response to the given query.
 	 */
 	// ASK(KB, MAKE-ACTION-QUERY(t))
-	public abstract Action ask(KnowledgeBase KB, Sentence actionQuery);
+	public abstract core.agent.Action ask(KnowledgeBase KB, Sentence actionQuery);
     }
 }

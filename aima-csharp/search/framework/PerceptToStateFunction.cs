@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using aima.core.agent;
 
 namespace aima.core.search.framework
@@ -12,7 +10,7 @@ namespace aima.core.search.framework
      * @author Ciaran O'Reilly
      * 
      */
-     public interface PerceptToStateFunction
+    public interface PerceptToStateFunction
     {
         /**
 	 * Get the problem state associated with a Percept.

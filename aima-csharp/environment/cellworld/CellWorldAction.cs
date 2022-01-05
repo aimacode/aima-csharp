@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.util;
 
@@ -17,7 +16,7 @@ namespace aima.core.environment.cellworld
      * @author Ciaran O'Reilly
      * 
      */
-     public class CellWorldAction : Action
+    public class CellWorldAction : agent.Action
     {
 	public CellWorldAction()
 	{

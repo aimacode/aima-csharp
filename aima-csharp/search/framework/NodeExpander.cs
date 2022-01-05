@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.search.framework.problem;
 
@@ -26,7 +25,7 @@ namespace aima.core.search.framework
 	 * parent node state to the specified state, creates a new node for the
 	 * specified state, adds it as child of the provided parent, and returns it.
 	 */
-         public Node createNode(System.Object state, Node parent, Action action, double stepCost)
+         public Node createNode(System.Object state, Node parent, agent.Action action, double stepCost)
         {
             return new Node(state, parent, action, parent.PathCost + stepCost);
         }
@@ -51,7 +50,7 @@ namespace aima.core.search.framework
             ResultFunction resultFunction = problem.getResultFunction();
             StepCostFunction stepCostFunction = problem.getStepCostFunction();
 
-            foreach (Action action in actionsFunction.actions(node.State))
+            foreach (agent.Action action in actionsFunction.actions(node.State))
             {
                 System.Object successorState = resultFunction.result(node.State, action);
 

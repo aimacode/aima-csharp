@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
-using System.Linq;
-using aima.core.logic.fol;
 using aima.core.logic.fol.inference.proof;
 using aima.core.logic.fol.parsing;
 using aima.core.logic.fol.parsing.ast;

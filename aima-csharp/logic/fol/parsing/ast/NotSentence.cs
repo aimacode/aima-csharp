@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
-using System.Linq;
-using aima.core.logic.fol;
-using aima.core.logic.fol.parsing;
-using aima.core.logic.fol.inference.proof;
 using System.Collections.ObjectModel;
 
 namespace aima.core.logic.fol.parsing.ast

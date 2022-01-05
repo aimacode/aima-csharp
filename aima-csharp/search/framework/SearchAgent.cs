@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
 using aima.core.search.framework.problem;
@@ -9,11 +8,11 @@ namespace aima.core.search.framework
      * @author Ravi Mohan
      * 
      */
-     public class SearchAgent : AbstractAgent
+    public class SearchAgent : AbstractAgent
     {
-        protected List<Action> actionList;
+        protected List<agent.Action> actionList;
 
-        private List<Action>.Enumerator actionIterator;
+        private List<agent.Action>.Enumerator actionIterator;
 
         private Metrics searchMetrics;
 
@@ -24,7 +23,7 @@ namespace aima.core.search.framework
             searchMetrics = search.getMetrics();
         }
 
-        public override Action execute(Percept p)
+        public override core.agent.Action execute(Percept p)
         {
 
             if (actionIterator.MoveNext())
@@ -42,7 +41,7 @@ namespace aima.core.search.framework
             return null != actionIterator.Current;
         }
 
-        public List<Action> getActions()
+        public List<agent.Action> getActions()
         {
             return actionList;
         }

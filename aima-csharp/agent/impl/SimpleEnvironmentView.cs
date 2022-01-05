@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using aima.core.agent;
-
 namespace aima.core.agent.impl
 {
     /**
@@ -12,7 +8,7 @@ namespace aima.core.agent.impl
      */
     public class SimpleEnvironmentView : EnvironmentView
     {
-        public void agentActed(Agent agent, Action action, EnvironmentState resultingState)
+        public void agentActed(Agent agent, agent.Action action, EnvironmentState resultingState)
         {
             System.Console.WriteLine("Agent acted: " + action.ToString());
         }

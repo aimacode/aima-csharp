@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
 using aima.core.search.framework.problem;
@@ -12,16 +11,16 @@ namespace aima.core.search.framework
      * @author Ruediger Lunde
      * 
      */
-     public class SearchUtils
+    public class SearchUtils
     {
         /**
 	 * Returns the list of actions corresponding to the complete path to the
 	 * given node or NoOp if path length is one.
 	 */    
-        public static List<Action> getSequenceOfActions(Node node)
+        public static List<agent.Action> getSequenceOfActions(Node node)
         {
             List<Node> nodes = node.GetPathFromRoot();
-            List<Action> actions = new List<Action>();
+            List<agent.Action> actions = new List<agent.Action>();
 
             if(nodes.Count == 1)
             {
@@ -43,13 +42,13 @@ namespace aima.core.search.framework
         }
 
         /** Returns an empty action list. */
-        public static List<Action> failure()
+        public static List<agent.Action> failure()
         {
-            return new List<Action>();
+            return new List<agent.Action>();
         }
 
         /** Checks whether a list of actions is empty. */
-        public static bool isFailure(List<Action> actions)
+        public static bool isFailure(List<agent.Action> actions)
         {
             if(actions.Count == 0)
             {

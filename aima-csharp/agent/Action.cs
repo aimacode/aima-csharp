@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.agent
 {
     /**
@@ -8,7 +5,7 @@ namespace aima.core.agent
      *
      * @author Ciaran O'Reilly
      */
-     public interface Action
+    public interface Action
      {
          /**
 	  * Indicates whether or not this Action is a 'No Operation'.<br>

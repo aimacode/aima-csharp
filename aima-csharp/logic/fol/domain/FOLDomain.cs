@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using aima.core.util;
-
 namespace aima.core.logic.fol.domain
 {
     /**

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using aima.core.search.framework;
-
 namespace aima.core.environment.map
 {
     /**

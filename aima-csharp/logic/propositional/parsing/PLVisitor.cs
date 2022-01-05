@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using aima.core.logic.propositional.parsing.ast;
 
 namespace aima.core.logic.propositional.parsing

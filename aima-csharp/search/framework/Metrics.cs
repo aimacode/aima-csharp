@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.search.framework
 {
     /**
@@ -9,7 +6,7 @@ namespace aima.core.search.framework
      * @author Ravi Mohan
      * @author Ruediger Lunde
      */
-     public class Metrics
+    public class Metrics
     {
         private Dictionary<String, String> hash;
 

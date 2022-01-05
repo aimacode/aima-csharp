@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.util
 {
     /**
@@ -16,7 +13,7 @@ namespace aima.core.util
      * decomposition is in the solution of square systems of simultaneous linear
      * equations. This will fail if isNonsingular() returns false.
      */
-     public class LUDecomposition
+    public class LUDecomposition
     {
 	private const long serialVersionUID = 1L;
 

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 
 namespace aima.core.search.framework.problem
@@ -12,7 +11,7 @@ namespace aima.core.search.framework.problem
     {
 
 
-        public double c(System.Object stateFrom, Action action, System.Object stateTo)
+        public double c(System.Object stateFrom, agent.Action action, System.Object stateTo)
         {
             return 1;
         }

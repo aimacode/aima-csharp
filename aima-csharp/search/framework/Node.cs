@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Action = aima.core.agent.Action;
 
 namespace aima.core.search.framework
@@ -55,12 +52,12 @@ namespace aima.core.search.framework
         }
 
         /// <summary>
-        ///     Creates a new instance of <see cref="Node" /> with the specified state, parent, action, and step cost.
+        ///     Creates a new instance of <see cref="Node" /> with the specified state, parent, agent.Action, and step cost.
         ///     <para>
         ///         The step cost is the cost from the parent node to this node.
         ///     </para>
         /// </summary>
-        public Node(object state, Node parent, Action action, double stepCost) : this(state)
+        public Node(object state, Node parent, agent.Action action, double stepCost) : this(state)
         {
             if (parent == null)
             {

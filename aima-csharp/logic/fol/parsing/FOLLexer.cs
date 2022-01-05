@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
-using System.Text.RegularExpressions;
 using aima.core.logic.common;
-using aima.core.logic.fol;
 using aima.core.logic.fol.domain;
 
 namespace aima.core.logic.fol.parsing

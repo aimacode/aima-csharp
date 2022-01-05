@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.search.framework.problem;
 
@@ -23,7 +22,7 @@ namespace aima.core.search.framework
 	 *         containing a single NoOp Action if already at the goal, or an
 	 *         empty list if the goal could not be found.
 	 */
-        List<Action> search(Problem p);
+        List<agent.Action> search(Problem p);
 
         /**
 	 * Returns all the metrics of the search.

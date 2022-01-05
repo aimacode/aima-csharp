@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using aima.core.agent;
 using System.Diagnostics;
 
 namespace aima.core.agent.impl

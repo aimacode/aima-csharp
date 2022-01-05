@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
-using aima.core.logic.fol;
 using aima.core.logic.fol.inference.proof;
 using aima.core.logic.fol.inference.trace;
 using aima.core.logic.fol.kb;

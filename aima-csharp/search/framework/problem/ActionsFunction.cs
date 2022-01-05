@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 
 namespace aima.core.search.framework.problem
@@ -22,6 +21,6 @@ namespace aima.core.search.framework.problem
          *            a particular state.
          * @return the set of actions that can be executed in s.
          */
-        HashSet<Action> actions(System.Object s);
+        HashSet<agent.Action> actions(System.Object s);
     }
 }

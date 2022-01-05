@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using aima.core.logic.fol.kb.data;
 using aima.core.logic.fol.parsing;
 using aima.core.logic.fol.parsing.ast;
@@ -21,7 +19,7 @@ namespace aima.core.logic.fol
      * @author Ciaran O'Reilly
      * @author Mike Stampone
      */
-     public class CNFConverter
+    public class CNFConverter
     {
 	private FOLParser parser = null;
 	private SubstVisitor substVisitor;

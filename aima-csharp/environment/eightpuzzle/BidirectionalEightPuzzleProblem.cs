@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.search.framework.problem;
 
 namespace aima.core.environment.eightpuzzle

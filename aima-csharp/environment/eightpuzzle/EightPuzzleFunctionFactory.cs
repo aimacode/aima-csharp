@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.search.framework.problem;
-using aima.core.util;
 
 namespace aima.core.environment.eightpuzzle
 {
@@ -34,11 +32,11 @@ namespace aima.core.environment.eightpuzzle
 
 	private class EPActionsFunction : ActionsFunction
 	{
-	    public HashSet<Action> actions(System.Object state)
+	    public HashSet<agent.Action> actions(System.Object state)
 	    {
 		EightPuzzleBoard board = (EightPuzzleBoard)state;
 
-		HashSet<Action> actions = new HashSet<Action>();
+		HashSet<agent.Action> actions = new HashSet<agent.Action>();
 
 		if (board.canMoveGap(EightPuzzleBoard.UP))
 		{
@@ -63,7 +61,7 @@ namespace aima.core.environment.eightpuzzle
 
 	private class EPResultFunction : ResultFunction
 	{
-	    public System.Object result(System.Object s, Action a)
+	    public System.Object result(System.Object s, agent.Action a)
 	    {
 		EightPuzzleBoard board = (EightPuzzleBoard) s;
 

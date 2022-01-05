@@ -1,7 +1,4 @@
-﻿using aima.core.logic.propositional.parsing.ast;
-using System;
-
-namespace aima.core.logic.propositional.parsing.ast
+﻿namespace aima.core.logic.propositional.parsing.ast
 {
     /**
      * Artificial Intelligence A Modern Approach (3rd Edition): page 244.<br>

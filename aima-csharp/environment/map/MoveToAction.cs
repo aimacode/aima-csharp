@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
 using aima.core.agent.impl;
 
 namespace aima.core.environment.map
-{ 
+{
     public class MoveToAction : DynamicAction
     {
 	public const String ATTRIBUTE_MOVE_TO_LOCATION = "location";
