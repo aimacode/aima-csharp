@@ -1,9 +1,7 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
 using aima.core.search.framework;
 using aima.core.search.framework.problem;
-using aima.core.util;
 
 namespace aima.core.environment.map
 {
@@ -46,9 +44,9 @@ namespace aima.core.environment.map
 		this.reverseMode = reverseMode;
 	    }
 
-	    public HashSet<Action> actions(System.Object state)
+	    public HashSet<agent.Action> actions(System.Object state)
 	    {
-		HashSet<Action> actions = new HashSet<Action>();
+		HashSet<agent.Action> actions = new HashSet<agent.Action>();
 		System.String location = state.ToString();
 
 		List<System.String> linkedLocations = reverseMode ? map.getPossiblePrevLocations(location)
@@ -76,7 +74,7 @@ namespace aima.core.environment.map
 	    {
 	    }
 
-	    public System.Object result(System.Object s, Action a)
+	    public System.Object result(System.Object s, agent.Action a)
 	    {
 
 		if (a is MoveToAction)

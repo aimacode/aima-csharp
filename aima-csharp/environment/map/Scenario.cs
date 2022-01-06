@@ -1,5 +1,3 @@
-using System;
-
 namespace aima.core.environment.map
 {
     /**

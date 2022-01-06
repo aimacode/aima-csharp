@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using aima.core.agent;
 using aima.core.agent.impl.aprog.simplerule;
 
 namespace aima.core.agent.impl.aprog
@@ -16,7 +14,7 @@ namespace aima.core.agent.impl.aprog
  *               rules, a set of condition-action rules
  *               action, the most recent action, initially none
  *               
- *   state  <- UPDATE-STATE(state, action, percept, model)
+ *   state  <- UPDATE-STATE(state, agent.Action, percept, model)
  *   rule   <- RULE-MATCH(state, rules)
  *   action <- rule.ACTION
  *   return action
@@ -91,7 +89,7 @@ namespace aima.core.agent.impl.aprog
         // function MODEL-BASED-REFLEX-AGENT(percept) returns an action
         public Action execute(Percept percept)
         {
-            // state <- UPDATE-STATE(state, action, percept, model)
+            // state <- UPDATE-STATE(state, agent.Action, percept, model)
             state = updateState(state, action, percept, model);
             // rule <- RULE-MATCH(state, rules)
             Rule rule = ruleMatch(state, rules);
@@ -111,7 +109,7 @@ namespace aima.core.agent.impl.aprog
 	 */
         protected abstract void init();
 
-        protected abstract DynamicState updateState(DynamicState state, Action action, Percept percept, Model model);
+        protected abstract DynamicState updateState(DynamicState state, agent.Action action, Percept percept, Model model);
 
         protected Rule ruleMatch(DynamicState state, HashSet<Rule> rules)
         {

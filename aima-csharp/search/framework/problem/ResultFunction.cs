@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 
 namespace aima.core.search.framework.problem
@@ -25,6 +24,6 @@ namespace aima.core.search.framework.problem
          *            an action to be performed in state s.
          * @return the state that results from doing action a in state s.
          */
-        System.Object result(System.Object s, Action a);
+        System.Object result(System.Object s, agent.Action a);
     }
 }

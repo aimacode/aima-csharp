@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using aima.core.logic.common;
-using aima.core.logic.propositional.parsing;
+﻿using aima.core.logic.common;
 using aima.core.util;
 
 namespace aima.core.logic.propositional.parsing.ast

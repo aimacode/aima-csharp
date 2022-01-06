@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using aima.core.logic.fol.inference.otter;
 using aima.core.logic.fol.kb.data;
 
 namespace aima.core.logic.fol.inference.otter.defaultimpl

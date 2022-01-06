@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
-using aima.core.agent.impl;
 
 namespace aima.core.agent.impl.aprog.simplerule
 {
@@ -12,7 +9,7 @@ namespace aima.core.agent.impl.aprog.simplerule
      * @author Ciaran O'Reilly
      * 
      */
-     public class EQUALCondition : Condition
+    public class EQUALCondition : Condition
     {
         private Object key;
 

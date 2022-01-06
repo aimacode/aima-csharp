@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
 using aima.core.agent;
-using aima.core.search.framework;
 using aima.core.search.framework.problem;
 
 namespace aima.core.search.framework.qsearch
@@ -55,7 +52,7 @@ namespace aima.core.search.framework.qsearch
 	 * Clears the set of explored states and calls the search implementation of
 	 * <code>QueSearch</code>
 	 */	
-	public override List<Action> search(Problem problem, Queue<Node> frontier)
+	public override List<agent.Action> search(Problem problem, Queue<Node> frontier)
 	{
 	    // initialize the explored set to be empty
 	    explored.Clear();

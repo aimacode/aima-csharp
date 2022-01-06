@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.Threading;
 using aima.core.agent;
-using aima.core.util;
 using aima.core.search.framework.problem;
 
 namespace aima.core.search.framework.qsearch
@@ -15,7 +12,7 @@ namespace aima.core.search.framework.qsearch
      * @author Mike Stampone
      * @author Ruediger Lunde
      */
-     public abstract class QueueSearch
+    public abstract class QueueSearch
     {
         public const System.String METRIC_NODES_EXPANDED = "nodesExpanded";
         public const System.String METRIC_QUEUE_SIZE = "queueSize";
@@ -54,7 +51,7 @@ namespace aima.core.search.framework.qsearch
     	 *         containing a single NoOp Action if already at the goal, or an
     	 *         empty list if the goal could not be found.
     	 */
-         public virtual List<Action> search(Problem problem, Queue<Node> frontier)
+         public virtual List<agent.Action> search(Problem problem, Queue<Node> frontier)
         {
             this.frontier = frontier;
             clearInstrumentation();
@@ -161,7 +158,7 @@ namespace aima.core.search.framework.qsearch
             }
         }
 
-        private List<Action> getSolution(Node node)
+        private List<agent.Action> getSolution(Node node)
         {
             metrics.set(METRIC_PATH_COST, node.PathCost);
             return SearchUtils.getSequenceOfActions(node);

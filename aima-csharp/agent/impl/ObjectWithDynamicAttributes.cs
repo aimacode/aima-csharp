@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
@@ -9,7 +7,7 @@ namespace aima.core.agent.impl
      * @author Ravi Mohan
      * @author Ciaran O'Reilly
      */
-     public abstract class ObjectWithDynamicAttributes
+    public abstract class ObjectWithDynamicAttributes
     {
         private Dictionary<Object, Object> attributes = new Dictionary<Object, Object>();
 

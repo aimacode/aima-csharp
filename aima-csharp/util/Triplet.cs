@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.util
 {
     /**
@@ -8,7 +5,7 @@ namespace aima.core.util
      * @author Mike Stampone
      * 
      */
-     public class Triplet<X, Y, Z>
+    public class Triplet<X, Y, Z>
     {
         private X x;
 

@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
-using System.Linq;
 using System.Collections.ObjectModel;
 using aima.core.logic.fol.kb.data;
 using aima.core.logic.fol.parsing.ast;

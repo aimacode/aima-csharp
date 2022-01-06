@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using aima.core.agent;
 using aima.core.util;
 
 namespace aima.core.agent.impl
@@ -27,7 +24,7 @@ namespace aima.core.agent.impl
         // Methods to be implemented by subclasses.
         public abstract EnvironmentState getCurrentState();
 
-        public abstract EnvironmentState executeAction(Agent agent, Action action);
+        public abstract EnvironmentState executeAction(Agent agent, agent.Action action);
 
         public abstract Percept getPerceptSeenBy(Agent anAgent);
         /**
@@ -176,7 +173,7 @@ namespace aima.core.agent.impl
             }
         }
 
-        protected void updateEnvironmentViewsAgentActed(Agent agent, Action action,
+        protected void updateEnvironmentViewsAgentActed(Agent agent, agent.Action action,
                 EnvironmentState state)
         {
             foreach (EnvironmentView view in views)

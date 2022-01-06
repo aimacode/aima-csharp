@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.search.local
 {
     /**
@@ -16,7 +13,7 @@ namespace aima.core.search.local
      *            individuals in the population (this is to provide flexibility in
      *            terms of how a problem can be encoded).
      */
-     public class Individual<A>
+    public class Individual<A>
     {
         private List<A> representation = new List<A>();
         private int descendants; // for debugging

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
 using aima.core.util;
@@ -36,11 +35,11 @@ namespace aima.core.search.framework
      * @author Ciaran O'Reilly
      * @author Mike Stampone
      */
-     public abstract class SimpleProblemSolvingAgent : AbstractAgent
+    public abstract class SimpleProblemSolvingAgent : AbstractAgent
     {
 
         // seq, an action sequence, initially empty
-        private List<Action> seq = new List<Action>();
+        private List<agent.Action> seq = new List<agent.Action>();
 
         //
         private bool formulateGoalsIndefinitely = true;
@@ -72,9 +71,9 @@ namespace aima.core.search.framework
         }
 
         // function SIMPLE-PROBLEM-SOLVING-AGENT(percept) returns an action
-        public override Action execute(Percept p)
+        public override core.agent.Action execute(Percept p)
         {
-            Action action = NoOpAction.NO_OP;
+            agent.Action action = NoOpAction.NO_OP;
 
             // state <- UPDATE-STATE(state, percept)
             updateState(p);
@@ -129,7 +128,7 @@ namespace aima.core.search.framework
 
         protected abstract Problem formulateProblem(System.Object goal);
 
-        protected abstract List<Action> search(Problem problem);
+        protected abstract List<agent.Action> search(Problem problem);
 
         protected abstract void notifyViewOfMetrics();
     }

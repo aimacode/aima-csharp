@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.agent
 {
     /**
@@ -12,7 +9,7 @@ namespace aima.core.agent
      *
      * @author Ciaran O'Reilly
      */
-     public interface Model
+    public interface Model
     {
 
     }

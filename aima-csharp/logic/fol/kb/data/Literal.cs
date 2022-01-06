@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Text;
 using aima.core.logic.fol.parsing.ast;
 

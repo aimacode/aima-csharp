@@ -1,6 +1,3 @@
-using System;
-using aima.core.agent;
-
 namespace aima.core.agent.impl
 {
     /**
@@ -8,7 +5,7 @@ namespace aima.core.agent.impl
      * @author Ciaran O'Reilly
      * @author Mike Stampone
      */
-     public abstract class AbstractAgent : Agent
+    public abstract class AbstractAgent : Agent
     {
         protected AgentProgram program;
         private bool alive = true;

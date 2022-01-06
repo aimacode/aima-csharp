@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
 using aima.core.logic.fol.inference.proof;
 

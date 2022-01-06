@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using aima.core.logic.fol.inference.otter;
 using aima.core.logic.fol.inference.otter.defaultimpl;
@@ -8,7 +5,6 @@ using aima.core.logic.fol.inference.proof;
 using aima.core.logic.fol.kb;
 using aima.core.logic.fol.kb.data;
 using aima.core.logic.fol.parsing.ast;
-using aima.core.logic.fol;
 
 namespace aima.core.logic.fol.inference
 {

@@ -1,5 +1,3 @@
-using System;
-
 namespace aima.core.logic.fol
 {
     /**

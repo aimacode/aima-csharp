@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using aima.core.logic.fol.kb.data;
 using aima.core.logic.fol.parsing;
 using aima.core.logic.fol.parsing.ast;

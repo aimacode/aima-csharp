@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
 using aima.core.search.framework;
@@ -43,15 +42,15 @@ namespace aima.core.search.online
     {
 	private OnlineSearchProblem problem;
 	private PerceptToStateFunction ptsFunction;
-	private readonly TwoKeyHashMap<object, Action, object> result = new TwoKeyHashMap<object, Action, object>();
+	private readonly TwoKeyHashMap<object, agent.Action, object> result = new TwoKeyHashMap<object, agent.Action, object>();
 	// untried, a table that lists, for each state, the actions not yet tried
-	private readonly Dictionary<object, List<agent.Action>> untried = new Dictionary<object, List<Action>>();
+	private readonly Dictionary<object, List<agent.Action>> untried = new Dictionary<object, List<agent.Action>>();
 	// unbacktracked, a table that lists,
 	// for each state, the backtracks not yet tried
 	private readonly Dictionary<object, List<object>> unbacktracked = new Dictionary<object, List<object>>();
 	// s, a, the previous state and action, initially null
 	private object s = null;
-	private Action a = null;
+	private agent.Action a = null;
 
 	/**
 	 * Constructs an online DFS agent with the specified search problem and
@@ -116,7 +115,7 @@ namespace aima.core.search.online
 
 	// function ONLINE-DFS-AGENT(s') returns an action
 	// inputs: s', a percept that identifies the current state
-	public override Action execute(Percept psDelta)
+	public override core.agent.Action execute(Percept psDelta)
 	{
 	    object sDelta = ptsFunction.getState(psDelta);
 	    // if GOAL-TEST(s') then return stop
@@ -169,7 +168,7 @@ namespace aima.core.search.online
 			// else a <- an action b such that result[s', b] =
 			// POP(unbacktracked[s'])
 			object popped = unbacktracked[sDelta].Remove(0);
-			foreach(Pair<object, Action> sa in result.Keys)
+			foreach(Pair<object, agent.Action> sa in result.Keys)
 			{
 			    if (sa.getFirst().Equals(sDelta) && result[sa].Equals(popped))
 			    {
@@ -216,9 +215,9 @@ namespace aima.core.search.online
 	    return getProblem().isGoalState(state);
 	}
 
-	private List<Action> actions(object state)
+	private List<agent.Action> actions(object state)
 	{
-	    return new List<Action>(problem.getActionsFunction()
+	    return new List<agent.Action>(problem.getActionsFunction()
 			    .actions(state));
 	}
     }

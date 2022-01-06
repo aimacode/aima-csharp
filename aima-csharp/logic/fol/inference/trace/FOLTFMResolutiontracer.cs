@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using aima.core.logic.fol.inference;
 using aima.core.logic.fol.kb.data;
 
 namespace aima.core.logic.fol.inference.trace

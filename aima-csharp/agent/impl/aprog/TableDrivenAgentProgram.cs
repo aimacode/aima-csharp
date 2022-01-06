@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using aima.core.agent;
-using aima.core.agent.impl;
 using aima.core.util;
 
 namespace aima.core.agent.impl.aprog

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace aima.core.environment.wumpusworld
+﻿namespace aima.core.environment.wumpusworld
 {
     internal class AgentPosition
     {

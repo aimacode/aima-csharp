@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.search.framework.problem;
 
 namespace aima.core.search.framework
-{    
+{
     /**
      * A specialization of the GoalTest interface so that it is possible to check
      * the solution once a Goal has been identified to determine if it is
@@ -30,6 +29,6 @@ namespace aima.core.search.framework
          * @return true if the solution is acceptable, false otherwise, which
          *         indicates the search should be continued.
          */
-        bool isAcceptableSolution(List<Action> actions, System.Object goal);
+        bool isAcceptableSolution(List<agent.Action> actions, System.Object goal);
     }
 }

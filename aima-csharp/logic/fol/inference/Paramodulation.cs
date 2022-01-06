@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using aima.core.logic.fol;
 using aima.core.logic.fol.inference.proof;
 using aima.core.logic.fol.kb.data;
 using aima.core.logic.fol.parsing.ast;

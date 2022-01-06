@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.environment.cellworld
 {
     /**
@@ -8,7 +5,7 @@ namespace aima.core.environment.cellworld
      * @author Ciaran O'Reilly
      * 
      */
-     public class CellWorldFactory
+    public class CellWorldFactory
     {
 	/**
 	 * Create the cell world as defined in Figure 17.1 in AIMA3e. (a) A simple 4

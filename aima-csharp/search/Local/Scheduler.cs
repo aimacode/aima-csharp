@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-
 namespace aima.core.search.local
 {
     /**
      * @author Ravi Mohan
      * 
      */
-     public class Scheduler
+    public class Scheduler
     {
         private int k, limit;
         private double lam;

@@ -1,5 +1,4 @@
-﻿using System;
-using System.CodeDom.Compiler;
+﻿using System.CodeDom.Compiler;
 
 namespace aima.core.logic.propositional.parsing.ast
 {

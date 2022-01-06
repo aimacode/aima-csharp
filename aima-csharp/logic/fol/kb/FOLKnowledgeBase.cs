@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
-using System.Linq;
-using aima.core.logic.fol;
 using aima.core.logic.fol.inference;
 using aima.core.logic.fol.kb.data;
 using aima.core.logic.fol.parsing;

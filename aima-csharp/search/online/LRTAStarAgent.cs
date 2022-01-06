@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
 using aima.core.search.framework;
@@ -50,12 +49,12 @@ namespace aima.core.search.online
 	private PerceptToStateFunction ptsFunction;
 	private HeuristicFunction hf;
 	// persistent: result, a table, indexed by state and action, initially empty
-	private readonly TwoKeyHashMap<object, Action, object> result = new TwoKeyHashMap<object, Action, object>();
+	private readonly TwoKeyHashMap<object, agent.Action, object> result = new TwoKeyHashMap<object, agent.Action, object>();
 	// H, a table of cost estimates indexed by state, initially empty
 	private readonly Dictionary<object, double> H = new Dictionary<object, double>();
 	// s, a, the previous state and action, initially null
 	private object s = null;
-	private Action a = null;
+	private agent.Action a = null;
 
 	/**
 	 * Constructs a LRTA* agent with the specified search problem, percept to
@@ -146,7 +145,7 @@ namespace aima.core.search.online
 
 	// function LRTA*-AGENT(s') returns an action
 	// inputs: s', a percept that identifies the current state
-	public override Action execute(Percept psDelta)
+	public override core.agent.Action execute(Percept psDelta)
 	{
 	    object sDelta = ptsFunction.getState(psDelta);
 	    // if GOAL-TEST(s') then return stop
@@ -170,7 +169,7 @@ namespace aima.core.search.online
 		    // H[s] <- min LRTA*-COST(s, b, result[s, b], H)
 		    // b (element of) ACTIONS(s)
 		    double minimum = double.MaxValue;
-		    foreach(Action b in actions(s))
+		    foreach(agent.Action b in actions(s))
 		    {
 			double cost = lrtaCost(s, b, result.get(s, b));
 			if(cost < minimum)
@@ -226,7 +225,7 @@ namespace aima.core.search.online
 	}
 
 	// function LRTA*-COST(s, a, s', H) returns a cost estimate
-	private double lrtaCost(object s, Action action, object sDelta)
+	private double lrtaCost(object s, agent.Action action, object sDelta)
 	{
 	    // if s' is undefined then return h(s)
 	    if (null == sDelta)
@@ -238,7 +237,7 @@ namespace aima.core.search.online
 			    + H[sDelta];
 	}
 
-	private HashSet<Action> actions(object state)
+	private HashSet<agent.Action> actions(object state)
 	{
 	    return problem.getActionsFunction().actions(state);
 	}

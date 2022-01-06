@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using aima.core.logic.fol.domain;
 using aima.core.logic.fol.inference;
 

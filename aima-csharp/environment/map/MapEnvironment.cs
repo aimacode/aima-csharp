@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using aima.core.agent;
 using aima.core.agent.impl;
 
@@ -44,7 +43,7 @@ namespace aima.core.environment.map
 	    return state;
 	}
 
-	public override EnvironmentState executeAction(Agent agent, Action a)
+	public override EnvironmentState executeAction(Agent agent, agent.Action a)
 	{
 
 	    if (!a.isNoOp())
